@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Categoria
+    public class Categoria
     {
+        public string Id { get; set; }
+        public string Nombre { get; set; }
+
+        public Categoria()
+        {
+        }
+
+        public Categoria(string id, string nombre)
+        {
+            Id = id;
+            Nombre = nombre;
+        }
     }
 }

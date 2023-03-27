@@ -41,8 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IOpcionesListas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicioCategoria.cs" />
+    <Compile Include="ServicioEmpleado.cs" />
+    <Compile Include="ServicioFabrica.cs" />
+    <Compile Include="ServicioMateriaPrima.cs" />
+    <Compile Include="ServicioMedidas.cs" />
+    <Compile Include="ServicioPlantas.cs" />
+    <Compile Include="ServicioProduccion.cs" />
+    <Compile Include="ServicioProducto.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
