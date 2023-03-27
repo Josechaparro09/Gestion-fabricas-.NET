@@ -47,10 +47,11 @@
     <Compile Include="ServicioEmpleado.cs" />
     <Compile Include="ServicioFabrica.cs" />
     <Compile Include="ServicioMateriaPrima.cs" />
-    <Compile Include="ServicioMedidas.cs" />
-    <Compile Include="ServicioPlantas.cs" />
+    <Compile Include="ServicioMedida.cs" />
+    <Compile Include="ServicioPlanta.cs" />
     <Compile Include="ServicioProduccion.cs" />
     <Compile Include="ServicioProducto.cs" />
+    <Compile Include="ServicioVenta.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">

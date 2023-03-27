@@ -22,5 +22,9 @@ namespace Entidades
             NombreCorto = nombreCorto;
             NombreLargo = nombreLargo;
         }
+        public override string ToString()
+        {
+            return $"\nMedida: {Id};{NombreCorto};{NombreLargo}";
+        }
     }
 }

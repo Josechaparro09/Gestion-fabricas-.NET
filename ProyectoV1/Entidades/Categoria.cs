@@ -20,5 +20,11 @@ namespace Entidades
             Id = id;
             Nombre = nombre;
         }
+
+        public override string ToString()
+        {
+            return $"\nCategoria:{Id};{Nombre}";
+
+        }
     }
 }

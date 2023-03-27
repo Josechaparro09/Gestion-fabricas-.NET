@@ -11,6 +11,8 @@ namespace Entidades
         public string Id { get; set; }
         public string Nombre { get; set; }
         public Categoria CategoriaProducto { get; set; }
+        public Medida MedidaProducto { get; set; }
+        public double Presentacion { get; set; }
         public double CostoProduccion { get; set; }
         public double PrecioVenta { get; set; }
 
@@ -18,13 +20,20 @@ namespace Entidades
         {
         }
 
-        public Producto(string id, string nombre, Categoria categoriaProducto, double costoProduccion, double precioVenta)
+        public Producto(string id, string nombre, Categoria categoriaProducto, Medida medidaProducto, double presentacion, double costoProduccion, double precioVenta)
         {
             Id = id;
             Nombre = nombre;
             CategoriaProducto = categoriaProducto;
+            MedidaProducto = medidaProducto;
+            Presentacion = presentacion;
             CostoProduccion = costoProduccion;
             PrecioVenta = precioVenta;
+        }
+
+        public override string ToString()
+        {
+            return $"\nProducto: {Id};{Nombre};{CategoriaProducto};{MedidaProducto};{Presentacion};{CostoProduccion};{PrecioVenta}";
         }
     }
 }

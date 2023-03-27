@@ -30,5 +30,9 @@ namespace Entidades
             Telefono = telefono;
             FechaIngreso = fechaIngreso;
         }
+        public override string ToString()
+        {
+            return $"\nEmpleado:{Cedula};{PNombre};{SNombre};{PApellido};{SApellido};{Telefono};{FechaIngreso.ToShortDateString()}";
+        }
     }
 }

@@ -22,5 +22,9 @@ namespace Entidades
             Nombre = nombre;
             EmpleadoAsignado = empleadoAsignado;
         }
+        public override string ToString()
+        {
+            return $"\nPlanta: {Id};{Nombre};{EmpleadoAsignado}";
+        }
     }
 }

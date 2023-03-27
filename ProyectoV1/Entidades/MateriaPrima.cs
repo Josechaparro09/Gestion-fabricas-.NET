@@ -30,5 +30,11 @@ namespace Entidades
             FechaCompra = fechaCompra;
             FechaExpiracion = fechaExpiracion;
         }
+
+        public override string ToString()
+        {
+            return $"\nMateria Prima: {Id};{Name};{Unidades};{Cantidad};{Medida};{FechaCompra.ToShortDateString()};{FechaExpiracion.ToShortDateString()}";
+        }
+
     }
 }

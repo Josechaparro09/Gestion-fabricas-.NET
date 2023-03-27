@@ -32,5 +32,9 @@ namespace Entidades
             MateriaPrimaUtilizada = materiaPrimaUtilizada;
             FechaProduccion = fechaProduccion;
         }
+        public override string ToString()
+        {
+            return $"\nProduccion: {Id};{Nombre};{cantidadProducida};{MedidaProduccion};{PlantaEncargada};{ProductoProducido};{MateriaPrimaUtilizada};{FechaProduccion.ToShortDateString()}";
+        }
     }
 }
