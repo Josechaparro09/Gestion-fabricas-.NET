@@ -21,8 +21,6 @@ namespace PresentacionGUI
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        Rectangle sizeGripRectangle;
-        bool inSizeDrag = false;
         const int GRIP_SIZE = 15;
 
         int w = 0;

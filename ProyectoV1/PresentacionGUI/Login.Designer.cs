@@ -46,7 +46,7 @@
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.txtUsuario = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtContra = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.btnIngresar = new Guna.UI.WinForms.GunaButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnCerrar = new Guna.UI.WinForms.GunaCircleButton();
             this.lblIniciarSesion = new Bunifu.UI.WinForms.BunifuLabel();
@@ -243,31 +243,31 @@
             this.txtContra.Enter += new System.EventHandler(this.txtContra_Enter);
             this.txtContra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtContra_MouseDown);
             // 
-            // gunaButton1
+            // btnIngresar
             // 
-            this.gunaButton1.Animated = true;
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(146, 470);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(160, 42);
-            this.gunaButton1.TabIndex = 3;
-            this.gunaButton1.Text = "Ingresar";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
+            this.btnIngresar.Animated = true;
+            this.btnIngresar.AnimationHoverSpeed = 0.07F;
+            this.btnIngresar.AnimationSpeed = 0.03F;
+            this.btnIngresar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnIngresar.BorderColor = System.Drawing.Color.Black;
+            this.btnIngresar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnIngresar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnIngresar.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.ForeColor = System.Drawing.Color.White;
+            this.btnIngresar.Image = null;
+            this.btnIngresar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnIngresar.Location = new System.Drawing.Point(146, 470);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnIngresar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnIngresar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnIngresar.OnHoverImage = null;
+            this.btnIngresar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnIngresar.Size = new System.Drawing.Size(160, 42);
+            this.btnIngresar.TabIndex = 3;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnIngresar.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // menuStrip1
             // 
@@ -293,7 +293,7 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Image = null;
             this.btnCerrar.ImageSize = new System.Drawing.Size(52, 52);
-            this.btnCerrar.Location = new System.Drawing.Point(415, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(420, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnCerrar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -331,7 +331,7 @@
             this.ClientSize = new System.Drawing.Size(457, 663);
             this.Controls.Add(this.lblIniciarSesion);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.gunaButton1);
+            this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.menuStrip1);
@@ -364,7 +364,7 @@
         private System.Windows.Forms.BindingSource usersBindingSource2;
         private Bunifu.UI.WinForms.BunifuTextBox txtUsuario;
         private Bunifu.UI.WinForms.BunifuTextBox txtContra;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btnIngresar;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private Guna.UI.WinForms.GunaCircleButton btnCerrar;
         private Bunifu.UI.WinForms.BunifuLabel lblIniciarSesion;

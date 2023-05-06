@@ -21,8 +21,6 @@ namespace PresentacionGUI
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        Rectangle sizeGripRectangle;
-        bool inSizeDrag = false;
         const int GRIP_SIZE = 15;
 
         int w = 0;
@@ -37,28 +35,25 @@ namespace PresentacionGUI
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'usuarios.Users' Puede moverla o quitarla según sea necesario.
-            this.usersTableAdapter.Fill(this.usuarios.Users);
+            
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data source= ManueCoronel\\SQL; Initial Catalog=DB; Integrated Security = True;";
-            string queryString = "SELECT * FROM users";
+            //string connectionString = "Data source= ManueCoronel\\SQL; Initial Catalog=DB; Integrated Security = True;";
+            //string queryString = "SELECT * FROM users";
            
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
+            //SqlConnection connection = new SqlConnection(connectionString);
+            //SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
 
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
+            //DataTable dataTable = new DataTable();
+            //adapter.Fill(dataTable);
 
             //grilleusers.DataSource = dataTable;
         }
-        bool vai = false;
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-
-        }
+   
+        
 
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
