@@ -13,5 +13,6 @@ namespace Logica
         List<T> GetAll();
         bool Update(T aModificar , T modificado);
         bool Exist(T clase);
+
     }
 }

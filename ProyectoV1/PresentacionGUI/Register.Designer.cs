@@ -112,7 +112,7 @@
             this.btnRegistrarse.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarse.Image = null;
             this.btnRegistrarse.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegistrarse.Location = new System.Drawing.Point(149, 526);
+            this.btnRegistrarse.Location = new System.Drawing.Point(146, 576);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRegistrarse.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -153,7 +153,7 @@
             this.txtContra.IconRight = null;
             this.txtContra.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContra.Lines = new string[0];
-            this.txtContra.Location = new System.Drawing.Point(99, 353);
+            this.txtContra.Location = new System.Drawing.Point(97, 385);
             this.txtContra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContra.MaxLength = 32767;
             this.txtContra.MinimumSize = new System.Drawing.Size(1, 1);
@@ -230,7 +230,7 @@
             this.txtUsuario.IconRight = null;
             this.txtUsuario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Lines = new string[0];
-            this.txtUsuario.Location = new System.Drawing.Point(99, 279);
+            this.txtUsuario.Location = new System.Drawing.Point(97, 296);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsuario.MaxLength = 32767;
             this.txtUsuario.MinimumSize = new System.Drawing.Size(1, 1);
@@ -306,7 +306,7 @@
             this.txtReContra.IconRight = null;
             this.txtReContra.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtReContra.Lines = new string[0];
-            this.txtReContra.Location = new System.Drawing.Point(99, 424);
+            this.txtReContra.Location = new System.Drawing.Point(97, 474);
             this.txtReContra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtReContra.MaxLength = 32767;
             this.txtReContra.MinimumSize = new System.Drawing.Size(1, 1);
@@ -383,7 +383,7 @@
             this.txtNombre.IconRight = null;
             this.txtNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.Lines = new string[0];
-            this.txtNombre.Location = new System.Drawing.Point(99, 208);
+            this.txtNombre.Location = new System.Drawing.Point(97, 207);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombre.MaxLength = 32767;
             this.txtNombre.MinimumSize = new System.Drawing.Size(1, 1);

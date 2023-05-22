@@ -1,4 +1,6 @@
 ﻿using Bunifu.UI.WinForms;
+using Entidades;
+using Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +16,7 @@ namespace PresentacionGUI
 {
     public partial class Register : Form
     {
+        UsuarioRepository usuarioRep = new UsuarioRepository(ConfigConnection.connectionString);
         #region 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -46,7 +49,12 @@ namespace PresentacionGUI
         }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            var formulario = new MenuAcceso();
+            this.Hide();
+            formulario.ShowDialog();
+            this.Close();
+
+
         }
 
         private void txtContra_TextChanged(object sender, EventArgs e)
@@ -73,7 +81,80 @@ namespace PresentacionGUI
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola");
+            Guardar();
+            
         }
+        void Guardar()
+        {
+            if (!Existe())
+            {
+                MessageBox.Show("El usuario ya esta registrado");
+                return;
+            }
+            else
+            {
+                if (ValidarCamposVacios() && ValidarContraseñaIgual())
+                {
+                    var usuario = new Usuario();
+                    usuario.Nombre = txtNombre.Text;
+                    usuario.NUsuario = txtUsuario.Text;
+                    usuario.Contrasenia = txtContra.Text;
+                    usuario.FRegistro = new DateTime();
+                    usuarioRep.Insertar(usuario);
+                    MessageBox.Show("Usuario registrado con exito");
+                    MostrarFormulario(new MenuPrincipalGUI());
+                }
+                
+            }
+        }
+        bool ValidarContraseñaIgual()
+        {
+            if (txtContra.Text == txtReContra.Text)
+            {
+                
+                return true;
+            }
+            MessageBox.Show("La contraseña no coincide");
+            return false;
+        }
+        bool longitudMinima()
+        {
+            var minima = 8;
+            if (txtNombre.Text.Length == minima || txtUsuario.Text.Length == minima || txtContra.TextLength == minima || txtReContra.TextLength == minima)
+            {
+                MessageBox.Show("La longitud minima para los campos es de 8 caracteres");
+                return false;
+            }
+            return true;
+        }
+        bool ValidarCamposVacios()
+        {
+            if (txtNombre.Text == "" || txtUsuario.Text == "" || txtContra.Text == "" || txtReContra.Text == "")
+            {
+                MessageBox.Show("Rectifique que los campos no esten vacios");
+                return false;
+            }
+            return true;
+            
+        }
+        bool Existe()
+        {
+            return usuarioRep.Existe(txtUsuario.Text);
+        }
+        void limpiarCampos()
+        {
+            txtNombre.Text = "";
+            txtUsuario.Text = "";
+            txtContra.Text = "";
+            txtReContra.Text = "";
+        }
+        void MostrarFormulario(Form f)
+        {
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+
+        }
+        
     }
 }

@@ -18,6 +18,7 @@ namespace Entidades
 
         public Empleado()
         {
+           
         }
 
         public Empleado(string cedula, string pNombre, string sNombre, string pApellido, string sApellido, string telefono, DateTime fechaIngreso)

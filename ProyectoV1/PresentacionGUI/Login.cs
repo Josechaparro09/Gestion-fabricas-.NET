@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Logica;
 
 namespace PresentacionGUI
 {
     public partial class Login : Form
     {
+        UsuarioRepository usuarioRep = new UsuarioRepository(ConfigConnection.connectionString);
         #region 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -84,7 +86,10 @@ namespace PresentacionGUI
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            var formulario = new MenuAcceso();
+            this.Hide();
+            formulario.ShowDialog();
+            this.Close();
         }
 
         private void bunifuTextBox1_TextChanged_1(object sender, EventArgs e)
@@ -117,6 +122,7 @@ namespace PresentacionGUI
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
+            IniciarSesion();
         }
 
         private void txtContra_MouseDown(object sender, MouseEventArgs e)
@@ -127,6 +133,20 @@ namespace PresentacionGUI
         {
             vacio();
             
+        }
+        void IniciarSesion()
+        {
+            if (!usuarioRep.ValidarUsuario(txtUsuario.Text, txtContra.Text))
+            {
+                var formulario = new MenuPrincipalGUI();
+                this.Hide();
+                formulario.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Los datos ingresados no son correctos");
+            }
         }
     }
 }
