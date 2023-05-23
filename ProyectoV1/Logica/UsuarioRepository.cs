@@ -45,7 +45,7 @@ namespace Logica
         {
             return usuarioRep.Existe(usuario);
         }
-        public bool ValidarUsuario(string usuario , string contrasenia)
+        public string ValidarUsuario(string usuario , string contrasenia)
         {
             return usuarioRep.ValidarUsuario(usuario,contrasenia);
         }

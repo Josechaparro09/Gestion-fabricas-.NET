@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -53,6 +54,7 @@
             this.txtReContra = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtNombre = new Bunifu.UI.WinForms.BunifuTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.BarraNotificacion = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.SuspendLayout();
             // 
             // lblIniciarSesion
@@ -441,6 +443,75 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseDown);
             // 
+            // BarraNotificacion
+            // 
+            this.BarraNotificacion.AllowDragging = false;
+            this.BarraNotificacion.AllowMultipleViews = true;
+            this.BarraNotificacion.ClickToClose = true;
+            this.BarraNotificacion.DoubleClickToClose = true;
+            this.BarraNotificacion.DurationAfterIdle = 3000;
+            this.BarraNotificacion.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BarraNotificacion.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BarraNotificacion.ErrorOptions.ActionBorderRadius = 1;
+            this.BarraNotificacion.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.BarraNotificacion.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.BarraNotificacion.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.BarraNotificacion.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.BarraNotificacion.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.BarraNotificacion.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.BarraNotificacion.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.BarraNotificacion.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.BarraNotificacion.ErrorOptions.IconLeftMargin = 12;
+            this.BarraNotificacion.FadeCloseIcon = false;
+            this.BarraNotificacion.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.BarraNotificacion.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BarraNotificacion.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BarraNotificacion.InformationOptions.ActionBorderRadius = 1;
+            this.BarraNotificacion.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.BarraNotificacion.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.BarraNotificacion.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.BarraNotificacion.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.BarraNotificacion.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.BarraNotificacion.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.BarraNotificacion.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.BarraNotificacion.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.BarraNotificacion.InformationOptions.IconLeftMargin = 12;
+            this.BarraNotificacion.Margin = 10;
+            this.BarraNotificacion.MaximumSize = new System.Drawing.Size(0, 0);
+            this.BarraNotificacion.MaximumViews = 7;
+            this.BarraNotificacion.MessageRightMargin = 15;
+            this.BarraNotificacion.MinimumSize = new System.Drawing.Size(0, 0);
+            this.BarraNotificacion.ShowBorders = false;
+            this.BarraNotificacion.ShowCloseIcon = false;
+            this.BarraNotificacion.ShowIcon = true;
+            this.BarraNotificacion.ShowShadows = true;
+            this.BarraNotificacion.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BarraNotificacion.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BarraNotificacion.SuccessOptions.ActionBorderRadius = 1;
+            this.BarraNotificacion.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.BarraNotificacion.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.BarraNotificacion.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.BarraNotificacion.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.BarraNotificacion.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.BarraNotificacion.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.BarraNotificacion.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.BarraNotificacion.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.BarraNotificacion.SuccessOptions.IconLeftMargin = 12;
+            this.BarraNotificacion.ViewsMargin = 7;
+            this.BarraNotificacion.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BarraNotificacion.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BarraNotificacion.WarningOptions.ActionBorderRadius = 1;
+            this.BarraNotificacion.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.BarraNotificacion.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.BarraNotificacion.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.BarraNotificacion.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.BarraNotificacion.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.BarraNotificacion.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.BarraNotificacion.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.BarraNotificacion.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.BarraNotificacion.WarningOptions.IconLeftMargin = 12;
+            this.BarraNotificacion.ZoomCloseIcon = true;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,5 +545,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtReContra;
         private Bunifu.UI.WinForms.BunifuTextBox txtNombre;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private Bunifu.UI.WinForms.BunifuSnackbar BarraNotificacion;
     }
 }

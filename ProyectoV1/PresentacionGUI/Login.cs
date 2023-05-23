@@ -136,16 +136,19 @@ namespace PresentacionGUI
         }
         void IniciarSesion()
         {
-            if (!usuarioRep.ValidarUsuario(txtUsuario.Text, txtContra.Text))
+            var nombre  = usuarioRep.ValidarUsuario(txtUsuario.Text, txtContra.Text);
+            if (nombre!=null)
             {
-                var formulario = new MenuPrincipalGUI();
+                var formulario = new MenuPrincipalGUI(nombre);
                 this.Hide();
                 formulario.ShowDialog();
+                
                 this.Close();
             }
             else
             {
                 MessageBox.Show("Los datos ingresados no son correctos");
+                BarraNotificacion.Show(this , "Los datos ingresados no son correctos");
             }
         }
     }

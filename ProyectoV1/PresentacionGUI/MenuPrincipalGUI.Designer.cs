@@ -30,38 +30,41 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalGUI));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tbpMain = new MetroFramework.Controls.MetroTabControl();
             this.tbRegistros = new MetroFramework.Controls.MetroTabPage();
-            this.tbProduccion = new MetroFramework.Controls.MetroTabPage();
-            this.tbInsumos = new MetroFramework.Controls.MetroTabPage();
-            this.tbVentas = new MetroFramework.Controls.MetroTabPage();
-            this.tbMedida = new MetroFramework.Controls.MetroTabPage();
-            this.tbCategorias = new MetroFramework.Controls.MetroTabPage();
-            this.tbProveedores = new MetroFramework.Controls.MetroTabPage();
-            this.tbPlantas = new MetroFramework.Controls.MetroTabPage();
-            this.tbProductos = new MetroFramework.Controls.MetroTabPage();
-            this.usuarios = new PresentacionGUI.Usuarios();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
-            this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
-            this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.btnProductos = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.btnPlantas = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.btnProveedores = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.btnCategorias = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.btnMedidas = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.txtUsuario = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tbProduccion = new MetroFramework.Controls.MetroTabPage();
             this.gunaAdvenceTileButton3 = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.gunaAdvenceTileButton2 = new Guna.UI.WinForms.GunaAdvenceTileButton();
+            this.tbInsumos = new MetroFramework.Controls.MetroTabPage();
             this.gunaAdvenceTileButton9 = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.gunaAdvenceTileButton1 = new Guna.UI.WinForms.GunaAdvenceTileButton();
+            this.tbVentas = new MetroFramework.Controls.MetroTabPage();
             this.gunaAdvenceTileButton10 = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.gunaAdvenceTileButton11 = new Guna.UI.WinForms.GunaAdvenceTileButton();
+            this.tbMedida = new MetroFramework.Controls.MetroTabPage();
+            this.gunaButton5 = new Guna.UI.WinForms.GunaButton();
+            this.tbCategorias = new MetroFramework.Controls.MetroTabPage();
+            this.gunaButton6 = new Guna.UI.WinForms.GunaButton();
+            this.tbProveedores = new MetroFramework.Controls.MetroTabPage();
+            this.gunaButton7 = new Guna.UI.WinForms.GunaButton();
+            this.tbPlantas = new MetroFramework.Controls.MetroTabPage();
+            this.gunaButton8 = new Guna.UI.WinForms.GunaButton();
+            this.tbProductos = new MetroFramework.Controls.MetroTabPage();
+            this.gunaButton9 = new Guna.UI.WinForms.GunaButton();
+            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
+            this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
+            this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.pnlMenu = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -69,12 +72,9 @@
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton5 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton6 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton7 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton8 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton9 = new Guna.UI.WinForms.GunaButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblNombre = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Menu = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.tbpMain.SuspendLayout();
             this.tbRegistros.SuspendLayout();
             this.tbProduccion.SuspendLayout();
@@ -85,8 +85,6 @@
             this.tbProveedores.SuspendLayout();
             this.tbPlantas.SuspendLayout();
             this.tbProductos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -144,188 +142,6 @@
             this.tbRegistros.VerticalScrollbarBarColor = true;
             this.tbRegistros.VerticalScrollbarHighlightOnWheel = false;
             this.tbRegistros.VerticalScrollbarSize = 10;
-            // 
-            // tbProduccion
-            // 
-            this.tbProduccion.Controls.Add(this.gunaAdvenceTileButton3);
-            this.tbProduccion.Controls.Add(this.gunaAdvenceTileButton2);
-            this.tbProduccion.HorizontalScrollbarBarColor = true;
-            this.tbProduccion.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbProduccion.HorizontalScrollbarSize = 10;
-            this.tbProduccion.Location = new System.Drawing.Point(4, 38);
-            this.tbProduccion.Name = "tbProduccion";
-            this.tbProduccion.Size = new System.Drawing.Size(815, 562);
-            this.tbProduccion.TabIndex = 1;
-            this.tbProduccion.Text = "Produccion";
-            this.tbProduccion.VerticalScrollbarBarColor = true;
-            this.tbProduccion.VerticalScrollbarHighlightOnWheel = false;
-            this.tbProduccion.VerticalScrollbarSize = 10;
-            // 
-            // tbInsumos
-            // 
-            this.tbInsumos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.tbInsumos.Controls.Add(this.gunaAdvenceTileButton9);
-            this.tbInsumos.Controls.Add(this.gunaAdvenceTileButton1);
-            this.tbInsumos.HorizontalScrollbarBarColor = true;
-            this.tbInsumos.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbInsumos.HorizontalScrollbarSize = 10;
-            this.tbInsumos.Location = new System.Drawing.Point(4, 38);
-            this.tbInsumos.Name = "tbInsumos";
-            this.tbInsumos.Size = new System.Drawing.Size(815, 562);
-            this.tbInsumos.TabIndex = 2;
-            this.tbInsumos.Text = "Insumos";
-            this.tbInsumos.VerticalScrollbarBarColor = true;
-            this.tbInsumos.VerticalScrollbarHighlightOnWheel = false;
-            this.tbInsumos.VerticalScrollbarSize = 10;
-            // 
-            // tbVentas
-            // 
-            this.tbVentas.Controls.Add(this.gunaAdvenceTileButton10);
-            this.tbVentas.Controls.Add(this.gunaAdvenceTileButton11);
-            this.tbVentas.HorizontalScrollbarBarColor = true;
-            this.tbVentas.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbVentas.HorizontalScrollbarSize = 10;
-            this.tbVentas.Location = new System.Drawing.Point(4, 38);
-            this.tbVentas.Name = "tbVentas";
-            this.tbVentas.Size = new System.Drawing.Size(815, 562);
-            this.tbVentas.TabIndex = 3;
-            this.tbVentas.Text = "Ventas";
-            this.tbVentas.VerticalScrollbarBarColor = true;
-            this.tbVentas.VerticalScrollbarHighlightOnWheel = false;
-            this.tbVentas.VerticalScrollbarSize = 10;
-            // 
-            // tbMedida
-            // 
-            this.tbMedida.Controls.Add(this.gunaButton5);
-            this.tbMedida.HorizontalScrollbarBarColor = true;
-            this.tbMedida.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbMedida.HorizontalScrollbarSize = 10;
-            this.tbMedida.Location = new System.Drawing.Point(4, 38);
-            this.tbMedida.Name = "tbMedida";
-            this.tbMedida.Size = new System.Drawing.Size(815, 562);
-            this.tbMedida.TabIndex = 4;
-            this.tbMedida.Text = "Medidas";
-            this.tbMedida.VerticalScrollbarBarColor = true;
-            this.tbMedida.VerticalScrollbarHighlightOnWheel = false;
-            this.tbMedida.VerticalScrollbarSize = 10;
-            this.tbMedida.Click += new System.EventHandler(this.tbMedida_Click);
-            // 
-            // tbCategorias
-            // 
-            this.tbCategorias.Controls.Add(this.gunaButton6);
-            this.tbCategorias.HorizontalScrollbarBarColor = true;
-            this.tbCategorias.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbCategorias.HorizontalScrollbarSize = 10;
-            this.tbCategorias.Location = new System.Drawing.Point(4, 38);
-            this.tbCategorias.Name = "tbCategorias";
-            this.tbCategorias.Size = new System.Drawing.Size(815, 562);
-            this.tbCategorias.TabIndex = 5;
-            this.tbCategorias.Text = "Categorias";
-            this.tbCategorias.VerticalScrollbarBarColor = true;
-            this.tbCategorias.VerticalScrollbarHighlightOnWheel = false;
-            this.tbCategorias.VerticalScrollbarSize = 10;
-            // 
-            // tbProveedores
-            // 
-            this.tbProveedores.Controls.Add(this.gunaButton7);
-            this.tbProveedores.HorizontalScrollbarBarColor = true;
-            this.tbProveedores.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbProveedores.HorizontalScrollbarSize = 10;
-            this.tbProveedores.Location = new System.Drawing.Point(4, 38);
-            this.tbProveedores.Name = "tbProveedores";
-            this.tbProveedores.Size = new System.Drawing.Size(815, 562);
-            this.tbProveedores.TabIndex = 6;
-            this.tbProveedores.Text = "Proveedores";
-            this.tbProveedores.VerticalScrollbarBarColor = true;
-            this.tbProveedores.VerticalScrollbarHighlightOnWheel = false;
-            this.tbProveedores.VerticalScrollbarSize = 10;
-            // 
-            // tbPlantas
-            // 
-            this.tbPlantas.Controls.Add(this.gunaButton8);
-            this.tbPlantas.HorizontalScrollbarBarColor = true;
-            this.tbPlantas.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbPlantas.HorizontalScrollbarSize = 10;
-            this.tbPlantas.Location = new System.Drawing.Point(4, 38);
-            this.tbPlantas.Name = "tbPlantas";
-            this.tbPlantas.Size = new System.Drawing.Size(815, 562);
-            this.tbPlantas.TabIndex = 7;
-            this.tbPlantas.Text = "Plantas";
-            this.tbPlantas.VerticalScrollbarBarColor = true;
-            this.tbPlantas.VerticalScrollbarHighlightOnWheel = false;
-            this.tbPlantas.VerticalScrollbarSize = 10;
-            // 
-            // tbProductos
-            // 
-            this.tbProductos.Controls.Add(this.gunaButton9);
-            this.tbProductos.HorizontalScrollbarBarColor = true;
-            this.tbProductos.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbProductos.HorizontalScrollbarSize = 10;
-            this.tbProductos.Location = new System.Drawing.Point(4, 38);
-            this.tbProductos.Name = "tbProductos";
-            this.tbProductos.Size = new System.Drawing.Size(815, 562);
-            this.tbProductos.TabIndex = 8;
-            this.tbProductos.Text = "Productos";
-            this.tbProductos.VerticalScrollbarBarColor = true;
-            this.tbProductos.VerticalScrollbarHighlightOnWheel = false;
-            this.tbProductos.VerticalScrollbarSize = 10;
-            // 
-            // usuarios
-            // 
-            this.usuarios.DataSetName = "Usuarios";
-            this.usuarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.usuarios;
-            // 
-            // gunaControlBox1
-            // 
-            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
-            this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1030, 0);
-            this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
-            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox1.TabIndex = 14;
-            // 
-            // gunaControlBox2
-            // 
-            this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox2.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox2.AnimationSpeed = 0.03F;
-            this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
-            this.gunaControlBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
-            this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(979, 0);
-            this.gunaControlBox2.Name = "gunaControlBox2";
-            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
-            this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox2.TabIndex = 15;
-            // 
-            // gunaControlBox3
-            // 
-            this.gunaControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox3.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox3.AnimationSpeed = 0.03F;
-            this.gunaControlBox3.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
-            this.gunaControlBox3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
-            this.gunaControlBox3.IconSize = 15F;
-            this.gunaControlBox3.Location = new System.Drawing.Point(928, 0);
-            this.gunaControlBox3.Name = "gunaControlBox3";
-            this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
-            this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox3.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox3.TabIndex = 16;
             // 
             // btnProductos
             // 
@@ -543,26 +359,26 @@
             this.txtUsuario.Modified = false;
             this.txtUsuario.Multiline = false;
             this.txtUsuario.Name = "txtUsuario";
-            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUsuario.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtUsuario.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUsuario.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties16.FillColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties16.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUsuario.OnIdleState = stateProperties16;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsuario.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtUsuario.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsuario.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties4.FillColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsuario.OnIdleState = stateProperties4;
             this.txtUsuario.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsuario.PasswordChar = '\0';
             this.txtUsuario.PlaceholderForeColor = System.Drawing.Color.DarkGray;
@@ -584,6 +400,22 @@
             this.txtUsuario.UseSystemPasswordChar = false;
             this.txtUsuario.Visible = false;
             this.txtUsuario.WordWrap = true;
+            // 
+            // tbProduccion
+            // 
+            this.tbProduccion.Controls.Add(this.gunaAdvenceTileButton3);
+            this.tbProduccion.Controls.Add(this.gunaAdvenceTileButton2);
+            this.tbProduccion.HorizontalScrollbarBarColor = true;
+            this.tbProduccion.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbProduccion.HorizontalScrollbarSize = 10;
+            this.tbProduccion.Location = new System.Drawing.Point(4, 38);
+            this.tbProduccion.Name = "tbProduccion";
+            this.tbProduccion.Size = new System.Drawing.Size(815, 562);
+            this.tbProduccion.TabIndex = 1;
+            this.tbProduccion.Text = "Produccion";
+            this.tbProduccion.VerticalScrollbarBarColor = true;
+            this.tbProduccion.VerticalScrollbarHighlightOnWheel = false;
+            this.tbProduccion.VerticalScrollbarSize = 10;
             // 
             // gunaAdvenceTileButton3
             // 
@@ -655,6 +487,23 @@
             this.gunaAdvenceTileButton2.TabIndex = 12;
             this.gunaAdvenceTileButton2.Text = "Recetas de produccion";
             // 
+            // tbInsumos
+            // 
+            this.tbInsumos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.tbInsumos.Controls.Add(this.gunaAdvenceTileButton9);
+            this.tbInsumos.Controls.Add(this.gunaAdvenceTileButton1);
+            this.tbInsumos.HorizontalScrollbarBarColor = true;
+            this.tbInsumos.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbInsumos.HorizontalScrollbarSize = 10;
+            this.tbInsumos.Location = new System.Drawing.Point(4, 38);
+            this.tbInsumos.Name = "tbInsumos";
+            this.tbInsumos.Size = new System.Drawing.Size(815, 562);
+            this.tbInsumos.TabIndex = 2;
+            this.tbInsumos.Text = "Insumos";
+            this.tbInsumos.VerticalScrollbarBarColor = true;
+            this.tbInsumos.VerticalScrollbarHighlightOnWheel = false;
+            this.tbInsumos.VerticalScrollbarSize = 10;
+            // 
             // gunaAdvenceTileButton9
             // 
             this.gunaAdvenceTileButton9.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -724,6 +573,22 @@
             this.gunaAdvenceTileButton1.Size = new System.Drawing.Size(210, 210);
             this.gunaAdvenceTileButton1.TabIndex = 13;
             this.gunaAdvenceTileButton1.Text = "Agregar insumo";
+            // 
+            // tbVentas
+            // 
+            this.tbVentas.Controls.Add(this.gunaAdvenceTileButton10);
+            this.tbVentas.Controls.Add(this.gunaAdvenceTileButton11);
+            this.tbVentas.HorizontalScrollbarBarColor = true;
+            this.tbVentas.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbVentas.HorizontalScrollbarSize = 10;
+            this.tbVentas.Location = new System.Drawing.Point(4, 38);
+            this.tbVentas.Name = "tbVentas";
+            this.tbVentas.Size = new System.Drawing.Size(815, 562);
+            this.tbVentas.TabIndex = 3;
+            this.tbVentas.Text = "Ventas";
+            this.tbVentas.VerticalScrollbarBarColor = true;
+            this.tbVentas.VerticalScrollbarHighlightOnWheel = false;
+            this.tbVentas.VerticalScrollbarSize = 10;
             // 
             // gunaAdvenceTileButton10
             // 
@@ -795,6 +660,270 @@
             this.gunaAdvenceTileButton11.TabIndex = 15;
             this.gunaAdvenceTileButton11.Text = "Nueva venta";
             // 
+            // tbMedida
+            // 
+            this.tbMedida.Controls.Add(this.gunaButton5);
+            this.tbMedida.HorizontalScrollbarBarColor = true;
+            this.tbMedida.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbMedida.HorizontalScrollbarSize = 10;
+            this.tbMedida.Location = new System.Drawing.Point(4, 38);
+            this.tbMedida.Name = "tbMedida";
+            this.tbMedida.Size = new System.Drawing.Size(815, 562);
+            this.tbMedida.TabIndex = 4;
+            this.tbMedida.Text = "Medidas";
+            this.tbMedida.VerticalScrollbarBarColor = true;
+            this.tbMedida.VerticalScrollbarHighlightOnWheel = false;
+            this.tbMedida.VerticalScrollbarSize = 10;
+            this.tbMedida.Click += new System.EventHandler(this.tbMedida_Click);
+            // 
+            // gunaButton5
+            // 
+            this.gunaButton5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaButton5.Animated = true;
+            this.gunaButton5.AnimationHoverSpeed = 0.07F;
+            this.gunaButton5.AnimationSpeed = 0.03F;
+            this.gunaButton5.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton5.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton5.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton5.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton5.ForeColor = System.Drawing.Color.White;
+            this.gunaButton5.Image = global::PresentacionGUI.Properties.Resources.Registros;
+            this.gunaButton5.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaButton5.Location = new System.Drawing.Point(304, 12);
+            this.gunaButton5.Name = "gunaButton5";
+            this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
+            this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton5.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton5.OnHoverImage = null;
+            this.gunaButton5.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton5.Radius = 20;
+            this.gunaButton5.Size = new System.Drawing.Size(234, 62);
+            this.gunaButton5.TabIndex = 14;
+            this.gunaButton5.Text = "Nueva medida";
+            this.gunaButton5.TextOffsetX = 10;
+            // 
+            // tbCategorias
+            // 
+            this.tbCategorias.Controls.Add(this.gunaButton6);
+            this.tbCategorias.HorizontalScrollbarBarColor = true;
+            this.tbCategorias.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbCategorias.HorizontalScrollbarSize = 10;
+            this.tbCategorias.Location = new System.Drawing.Point(4, 38);
+            this.tbCategorias.Name = "tbCategorias";
+            this.tbCategorias.Size = new System.Drawing.Size(815, 562);
+            this.tbCategorias.TabIndex = 5;
+            this.tbCategorias.Text = "Categorias";
+            this.tbCategorias.VerticalScrollbarBarColor = true;
+            this.tbCategorias.VerticalScrollbarHighlightOnWheel = false;
+            this.tbCategorias.VerticalScrollbarSize = 10;
+            // 
+            // gunaButton6
+            // 
+            this.gunaButton6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaButton6.Animated = true;
+            this.gunaButton6.AnimationHoverSpeed = 0.07F;
+            this.gunaButton6.AnimationSpeed = 0.03F;
+            this.gunaButton6.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton6.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton6.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton6.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton6.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton6.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton6.ForeColor = System.Drawing.Color.White;
+            this.gunaButton6.Image = global::PresentacionGUI.Properties.Resources.Registros;
+            this.gunaButton6.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaButton6.Location = new System.Drawing.Point(304, 12);
+            this.gunaButton6.Name = "gunaButton6";
+            this.gunaButton6.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
+            this.gunaButton6.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton6.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton6.OnHoverImage = null;
+            this.gunaButton6.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton6.Radius = 20;
+            this.gunaButton6.Size = new System.Drawing.Size(234, 62);
+            this.gunaButton6.TabIndex = 15;
+            this.gunaButton6.Text = "Nueva categoria";
+            this.gunaButton6.TextOffsetX = 10;
+            // 
+            // tbProveedores
+            // 
+            this.tbProveedores.Controls.Add(this.gunaButton7);
+            this.tbProveedores.HorizontalScrollbarBarColor = true;
+            this.tbProveedores.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbProveedores.HorizontalScrollbarSize = 10;
+            this.tbProveedores.Location = new System.Drawing.Point(4, 38);
+            this.tbProveedores.Name = "tbProveedores";
+            this.tbProveedores.Size = new System.Drawing.Size(815, 562);
+            this.tbProveedores.TabIndex = 6;
+            this.tbProveedores.Text = "Proveedores";
+            this.tbProveedores.VerticalScrollbarBarColor = true;
+            this.tbProveedores.VerticalScrollbarHighlightOnWheel = false;
+            this.tbProveedores.VerticalScrollbarSize = 10;
+            // 
+            // gunaButton7
+            // 
+            this.gunaButton7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaButton7.Animated = true;
+            this.gunaButton7.AnimationHoverSpeed = 0.07F;
+            this.gunaButton7.AnimationSpeed = 0.03F;
+            this.gunaButton7.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton7.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton7.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton7.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton7.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton7.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton7.ForeColor = System.Drawing.Color.White;
+            this.gunaButton7.Image = global::PresentacionGUI.Properties.Resources.Registros;
+            this.gunaButton7.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaButton7.Location = new System.Drawing.Point(304, 12);
+            this.gunaButton7.Name = "gunaButton7";
+            this.gunaButton7.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
+            this.gunaButton7.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton7.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton7.OnHoverImage = null;
+            this.gunaButton7.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton7.Radius = 20;
+            this.gunaButton7.Size = new System.Drawing.Size(234, 62);
+            this.gunaButton7.TabIndex = 16;
+            this.gunaButton7.Text = "Nuevo proveedor";
+            this.gunaButton7.TextOffsetX = 10;
+            this.gunaButton7.Click += new System.EventHandler(this.gunaButton7_Click);
+            // 
+            // tbPlantas
+            // 
+            this.tbPlantas.Controls.Add(this.gunaButton8);
+            this.tbPlantas.HorizontalScrollbarBarColor = true;
+            this.tbPlantas.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbPlantas.HorizontalScrollbarSize = 10;
+            this.tbPlantas.Location = new System.Drawing.Point(4, 38);
+            this.tbPlantas.Name = "tbPlantas";
+            this.tbPlantas.Size = new System.Drawing.Size(815, 562);
+            this.tbPlantas.TabIndex = 7;
+            this.tbPlantas.Text = "Plantas";
+            this.tbPlantas.VerticalScrollbarBarColor = true;
+            this.tbPlantas.VerticalScrollbarHighlightOnWheel = false;
+            this.tbPlantas.VerticalScrollbarSize = 10;
+            // 
+            // gunaButton8
+            // 
+            this.gunaButton8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaButton8.Animated = true;
+            this.gunaButton8.AnimationHoverSpeed = 0.07F;
+            this.gunaButton8.AnimationSpeed = 0.03F;
+            this.gunaButton8.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton8.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton8.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton8.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton8.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton8.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton8.ForeColor = System.Drawing.Color.White;
+            this.gunaButton8.Image = global::PresentacionGUI.Properties.Resources.Registros;
+            this.gunaButton8.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaButton8.Location = new System.Drawing.Point(304, 12);
+            this.gunaButton8.Name = "gunaButton8";
+            this.gunaButton8.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
+            this.gunaButton8.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton8.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton8.OnHoverImage = null;
+            this.gunaButton8.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton8.Radius = 20;
+            this.gunaButton8.Size = new System.Drawing.Size(234, 62);
+            this.gunaButton8.TabIndex = 16;
+            this.gunaButton8.Text = "Nueva planta";
+            this.gunaButton8.TextOffsetX = 10;
+            // 
+            // tbProductos
+            // 
+            this.tbProductos.Controls.Add(this.gunaButton9);
+            this.tbProductos.HorizontalScrollbarBarColor = true;
+            this.tbProductos.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbProductos.HorizontalScrollbarSize = 10;
+            this.tbProductos.Location = new System.Drawing.Point(4, 38);
+            this.tbProductos.Name = "tbProductos";
+            this.tbProductos.Size = new System.Drawing.Size(815, 562);
+            this.tbProductos.TabIndex = 8;
+            this.tbProductos.Text = "Productos";
+            this.tbProductos.VerticalScrollbarBarColor = true;
+            this.tbProductos.VerticalScrollbarHighlightOnWheel = false;
+            this.tbProductos.VerticalScrollbarSize = 10;
+            // 
+            // gunaButton9
+            // 
+            this.gunaButton9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaButton9.Animated = true;
+            this.gunaButton9.AnimationHoverSpeed = 0.07F;
+            this.gunaButton9.AnimationSpeed = 0.03F;
+            this.gunaButton9.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton9.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton9.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton9.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton9.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton9.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton9.ForeColor = System.Drawing.Color.White;
+            this.gunaButton9.Image = global::PresentacionGUI.Properties.Resources.Registros;
+            this.gunaButton9.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaButton9.Location = new System.Drawing.Point(304, 12);
+            this.gunaButton9.Name = "gunaButton9";
+            this.gunaButton9.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
+            this.gunaButton9.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton9.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton9.OnHoverImage = null;
+            this.gunaButton9.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton9.Radius = 20;
+            this.gunaButton9.Size = new System.Drawing.Size(234, 62);
+            this.gunaButton9.TabIndex = 16;
+            this.gunaButton9.Text = "Nuevo producto";
+            this.gunaButton9.TextOffsetX = 10;
+            // 
+            // gunaControlBox1
+            // 
+            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox1.AnimationSpeed = 0.03F;
+            this.gunaControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
+            this.gunaControlBox1.IconSize = 15F;
+            this.gunaControlBox1.Location = new System.Drawing.Point(1030, 0);
+            this.gunaControlBox1.Name = "gunaControlBox1";
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
+            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox1.TabIndex = 14;
+            // 
+            // gunaControlBox2
+            // 
+            this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox2.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox2.AnimationSpeed = 0.03F;
+            this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
+            this.gunaControlBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
+            this.gunaControlBox2.IconSize = 15F;
+            this.gunaControlBox2.Location = new System.Drawing.Point(979, 0);
+            this.gunaControlBox2.Name = "gunaControlBox2";
+            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
+            this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox2.TabIndex = 15;
+            // 
+            // gunaControlBox3
+            // 
+            this.gunaControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox3.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox3.AnimationSpeed = 0.03F;
+            this.gunaControlBox3.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
+            this.gunaControlBox3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
+            this.gunaControlBox3.IconSize = 15F;
+            this.gunaControlBox3.Location = new System.Drawing.Point(928, 0);
+            this.gunaControlBox3.Name = "gunaControlBox3";
+            this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
+            this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox3.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox3.TabIndex = 16;
+            // 
             // pnlMenu
             // 
             this.pnlMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
@@ -804,6 +933,7 @@
             this.pnlMenu.BorderRadius = 3;
             this.pnlMenu.BorderThickness = 1;
             this.pnlMenu.Controls.Add(this.bunifuPictureBox1);
+            this.pnlMenu.Controls.Add(this.lblNombre);
             this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 24);
@@ -818,7 +948,7 @@
             this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuPictureBox1.AutoSizeHeight = true;
             this.bunifuPictureBox1.BorderRadius = 50;
-            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
+            this.bunifuPictureBox1.Image = global::PresentacionGUI.Properties.Resources.Logo;
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(73, 21);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
@@ -952,153 +1082,97 @@
             this.gunaButton1.TextOffsetX = 10;
             this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
-            // gunaButton5
-            // 
-            this.gunaButton5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaButton5.Animated = true;
-            this.gunaButton5.AnimationHoverSpeed = 0.07F;
-            this.gunaButton5.AnimationSpeed = 0.03F;
-            this.gunaButton5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton5.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton5.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton5.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton5.ForeColor = System.Drawing.Color.White;
-            this.gunaButton5.Image = global::PresentacionGUI.Properties.Resources.Registros;
-            this.gunaButton5.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaButton5.Location = new System.Drawing.Point(304, 12);
-            this.gunaButton5.Name = "gunaButton5";
-            this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
-            this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton5.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton5.OnHoverImage = null;
-            this.gunaButton5.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton5.Radius = 20;
-            this.gunaButton5.Size = new System.Drawing.Size(234, 62);
-            this.gunaButton5.TabIndex = 14;
-            this.gunaButton5.Text = "Nueva medida";
-            this.gunaButton5.TextOffsetX = 10;
-            // 
-            // gunaButton6
-            // 
-            this.gunaButton6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaButton6.Animated = true;
-            this.gunaButton6.AnimationHoverSpeed = 0.07F;
-            this.gunaButton6.AnimationSpeed = 0.03F;
-            this.gunaButton6.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton6.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton6.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton6.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton6.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton6.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton6.ForeColor = System.Drawing.Color.White;
-            this.gunaButton6.Image = global::PresentacionGUI.Properties.Resources.Registros;
-            this.gunaButton6.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaButton6.Location = new System.Drawing.Point(304, 12);
-            this.gunaButton6.Name = "gunaButton6";
-            this.gunaButton6.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
-            this.gunaButton6.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton6.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton6.OnHoverImage = null;
-            this.gunaButton6.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton6.Radius = 20;
-            this.gunaButton6.Size = new System.Drawing.Size(234, 62);
-            this.gunaButton6.TabIndex = 15;
-            this.gunaButton6.Text = "Nueva categoria";
-            this.gunaButton6.TextOffsetX = 10;
-            // 
-            // gunaButton7
-            // 
-            this.gunaButton7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaButton7.Animated = true;
-            this.gunaButton7.AnimationHoverSpeed = 0.07F;
-            this.gunaButton7.AnimationSpeed = 0.03F;
-            this.gunaButton7.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton7.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton7.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton7.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton7.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton7.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton7.ForeColor = System.Drawing.Color.White;
-            this.gunaButton7.Image = global::PresentacionGUI.Properties.Resources.Registros;
-            this.gunaButton7.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaButton7.Location = new System.Drawing.Point(304, 12);
-            this.gunaButton7.Name = "gunaButton7";
-            this.gunaButton7.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
-            this.gunaButton7.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton7.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton7.OnHoverImage = null;
-            this.gunaButton7.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton7.Radius = 20;
-            this.gunaButton7.Size = new System.Drawing.Size(234, 62);
-            this.gunaButton7.TabIndex = 16;
-            this.gunaButton7.Text = "Nuevo proveedor";
-            this.gunaButton7.TextOffsetX = 10;
-            this.gunaButton7.Click += new System.EventHandler(this.gunaButton7_Click);
-            // 
-            // gunaButton8
-            // 
-            this.gunaButton8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaButton8.Animated = true;
-            this.gunaButton8.AnimationHoverSpeed = 0.07F;
-            this.gunaButton8.AnimationSpeed = 0.03F;
-            this.gunaButton8.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton8.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton8.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton8.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton8.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton8.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton8.ForeColor = System.Drawing.Color.White;
-            this.gunaButton8.Image = global::PresentacionGUI.Properties.Resources.Registros;
-            this.gunaButton8.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaButton8.Location = new System.Drawing.Point(304, 12);
-            this.gunaButton8.Name = "gunaButton8";
-            this.gunaButton8.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
-            this.gunaButton8.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton8.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton8.OnHoverImage = null;
-            this.gunaButton8.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton8.Radius = 20;
-            this.gunaButton8.Size = new System.Drawing.Size(234, 62);
-            this.gunaButton8.TabIndex = 16;
-            this.gunaButton8.Text = "Nueva planta";
-            this.gunaButton8.TextOffsetX = 10;
-            // 
-            // gunaButton9
-            // 
-            this.gunaButton9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaButton9.Animated = true;
-            this.gunaButton9.AnimationHoverSpeed = 0.07F;
-            this.gunaButton9.AnimationSpeed = 0.03F;
-            this.gunaButton9.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton9.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton9.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton9.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton9.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton9.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton9.ForeColor = System.Drawing.Color.White;
-            this.gunaButton9.Image = global::PresentacionGUI.Properties.Resources.Registros;
-            this.gunaButton9.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaButton9.Location = new System.Drawing.Point(304, 12);
-            this.gunaButton9.Name = "gunaButton9";
-            this.gunaButton9.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
-            this.gunaButton9.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton9.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton9.OnHoverImage = null;
-            this.gunaButton9.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton9.Radius = 20;
-            this.gunaButton9.Size = new System.Drawing.Size(234, 62);
-            this.gunaButton9.TabIndex = 16;
-            this.gunaButton9.Text = "Nuevo producto";
-            this.gunaButton9.TextOffsetX = 10;
-            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(256, 18);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(819, 51);
+            this.panel2.Size = new System.Drawing.Size(819, 26);
             this.panel2.TabIndex = 3;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AllowParentOverrides = false;
+            this.lblNombre.AutoEllipsis = false;
+            this.lblNombre.CursorType = null;
+            this.lblNombre.Font = new System.Drawing.Font("Poppins Medium", 15.14F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(84, 127);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNombre.Size = new System.Drawing.Size(79, 34);
+            this.lblNombre.TabIndex = 3;
+            this.lblNombre.Text = "Usuario";
+            this.lblNombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblNombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // Menu
+            // 
+            this.Menu.AllowDragging = false;
+            this.Menu.AllowMultipleViews = true;
+            this.Menu.ClickToClose = true;
+            this.Menu.DoubleClickToClose = true;
+            this.Menu.DurationAfterIdle = 3000;
+            this.Menu.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Menu.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Menu.ErrorOptions.ActionBorderRadius = 1;
+            this.Menu.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Menu.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Menu.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.Menu.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.Menu.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.Menu.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.Menu.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.Menu.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.Menu.ErrorOptions.IconLeftMargin = 12;
+            this.Menu.FadeCloseIcon = false;
+            this.Menu.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.Menu.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Menu.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Menu.InformationOptions.ActionBorderRadius = 1;
+            this.Menu.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Menu.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Menu.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.Menu.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.Menu.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.Menu.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.Menu.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.Menu.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.Menu.InformationOptions.IconLeftMargin = 12;
+            this.Menu.Margin = 10;
+            this.Menu.MaximumSize = new System.Drawing.Size(0, 0);
+            this.Menu.MaximumViews = 7;
+            this.Menu.MessageRightMargin = 15;
+            this.Menu.MinimumSize = new System.Drawing.Size(0, 0);
+            this.Menu.ShowBorders = false;
+            this.Menu.ShowCloseIcon = false;
+            this.Menu.ShowIcon = true;
+            this.Menu.ShowShadows = true;
+            this.Menu.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Menu.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Menu.SuccessOptions.ActionBorderRadius = 1;
+            this.Menu.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Menu.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Menu.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.Menu.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.Menu.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.Menu.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.Menu.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.Menu.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.Menu.SuccessOptions.IconLeftMargin = 12;
+            this.Menu.ViewsMargin = 7;
+            this.Menu.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Menu.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Menu.WarningOptions.ActionBorderRadius = 1;
+            this.Menu.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Menu.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Menu.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.Menu.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.Menu.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.Menu.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.Menu.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.Menu.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.Menu.WarningOptions.IconLeftMargin = 12;
+            this.Menu.ZoomCloseIcon = true;
             // 
             // MenuPrincipalGUI
             // 
@@ -1129,9 +1203,8 @@
             this.tbProveedores.ResumeLayout(false);
             this.tbPlantas.ResumeLayout(false);
             this.tbProductos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.usuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1142,8 +1215,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private Usuarios usuarios;
-        private System.Windows.Forms.BindingSource usersBindingSource;
         private Bunifu.UI.WinForms.BunifuPanel pnlMenu;
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroTabControl tbpMain;
@@ -1182,5 +1253,7 @@
         private Guna.UI.WinForms.GunaButton gunaButton8;
         private Guna.UI.WinForms.GunaButton gunaButton9;
         private System.Windows.Forms.Panel panel2;
+        private Bunifu.UI.WinForms.BunifuLabel lblNombre;
+        private Bunifu.UI.WinForms.BunifuSnackbar Menu;
     }
 }

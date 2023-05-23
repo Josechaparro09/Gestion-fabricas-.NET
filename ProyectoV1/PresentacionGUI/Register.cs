@@ -102,7 +102,12 @@ namespace PresentacionGUI
                     usuario.FRegistro = new DateTime();
                     usuarioRep.Insertar(usuario);
                     MessageBox.Show("Usuario registrado con exito");
-                    MostrarFormulario(new MenuPrincipalGUI());
+                    var f = new MenuAcceso();
+                    this.Hide();
+                    f.ShowDialog();
+                    
+                    this.Close();
+                    //BarraNotificacion.Show(f,"Usuario registrado con exito");
                 }
                 
             }

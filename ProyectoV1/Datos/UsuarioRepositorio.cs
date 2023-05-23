@@ -124,24 +124,20 @@ namespace Datos
             }
 
         }
-        public bool ValidarUsuario(string usuario , string contrasenia)
+        public string ValidarUsuario(string usuario , string contrasenia)
         {
             var comando = _conexion.CreateCommand();
-            comando.CommandText = "SELECT COUNT(*) FROM Usuarios WHERE NUsuario = @usuario AND Contrasenia = @contrasenia ";
+            comando.CommandText = "SELECT Nombre FROM Usuarios WHERE NUsuario = @usuario AND Contrasenia = @contrasenia ";
             comando.Parameters.Add("usuario", SqlDbType.VarChar).Value = usuario;
             comando.Parameters.Add("Contrasenia", SqlDbType.VarChar).Value = contrasenia;
             Open();
-            var contador = (int)comando.ExecuteScalar();
+            var nombre = (string)comando.ExecuteScalar();
+            
             Close();
-            if (contador != 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return nombre;
         }
+
+
  
 
     }

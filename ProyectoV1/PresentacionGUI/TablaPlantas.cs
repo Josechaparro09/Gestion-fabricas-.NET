@@ -16,5 +16,10 @@ namespace PresentacionGUI
         {
             InitializeComponent();
         }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
