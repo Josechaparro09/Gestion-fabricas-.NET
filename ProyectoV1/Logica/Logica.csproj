@@ -45,6 +45,7 @@
     <Compile Include="CategoriaRepository.cs" />
     <Compile Include="IOpcionesListas.cs" />
     <Compile Include="MedidaRepository.cs" />
+    <Compile Include="ProveedorRepository.cs" />
     <Compile Include="UsuarioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicioCategoria.cs" />

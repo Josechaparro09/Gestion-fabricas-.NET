@@ -32,10 +32,12 @@ namespace PresentacionGUI
         #endregion
         MedidaRepository medidaRep = new MedidaRepository(ConfigConnection.connectionString);
         CategoriaRepository categoriaRep = new CategoriaRepository(ConfigConnection.connectionString);
+        ProveedorRepository provRep = new ProveedorRepository(ConfigConnection.connectionString);
         public MenuPrincipalGUI(string usuario)
         {
             InitializeComponent();
             this.lblNombre.Text = usuario;
+            this.tbpMain.ShowToolTips = true;
 
         }
 
@@ -158,7 +160,8 @@ namespace PresentacionGUI
 
         private void gunaButton7_Click(object sender, EventArgs e)
         {
-
+            tbpMain.SelectTab(11
+                );
         }
 
         private void gunaButton1_Click(object sender, EventArgs e)
@@ -268,6 +271,33 @@ namespace PresentacionGUI
                 categoriaRep.Insertar(categoria);
                 tbpMain.SelectedIndex = 5;
                 Menu.Show(this , "Categoria agregada correctamente");
+            }
+        }
+
+        private void tbProveedores_Enter(object sender, EventArgs e)
+        {
+            tbProve.DataSource = provRep.ObtenerTodos();
+        }
+
+        private void btnInngresarProv_Click(object sender, EventArgs e)
+        {
+            GuardarProveedor();
+        }
+        void GuardarProveedor()
+        {
+            if (txtNombreProv.Text =="" || txtTelefonoProv.Text == "" || txtDireccionProv.Text == "")
+            {
+                Menu.Show(this, "Verifique que los campos no esten vacios");
+            }
+            else
+            {
+                var prov = new Proveedores();
+                prov.Nombre = txtNombreProv.Text;
+                prov.Telefono = txtTelefonoProv.Text;
+                prov.Direccion = txtDireccionProv.Text;
+                provRep.Insertar(prov);
+                tbpMain.SelectedIndex = 6;
+                Menu.Show(this , "Proveedor registrado con exito");
             }
         }
     }

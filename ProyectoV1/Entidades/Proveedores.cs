@@ -12,17 +12,19 @@ namespace Entidades
         public string Nombre { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
+        public DateTime FRegistro { get; set; }
 
         public Proveedores()
         {
         }
 
-        public Proveedores(int id, string nombre, string telefono, string direccion)
+        public Proveedores(int id, string nombre, string telefono, string direccion, DateTime fregistro)
         {
             Id = id;
             Nombre = nombre;
             Telefono = telefono;
             Direccion = direccion;
+            FRegistro = fregistro;
         }
     }
 }

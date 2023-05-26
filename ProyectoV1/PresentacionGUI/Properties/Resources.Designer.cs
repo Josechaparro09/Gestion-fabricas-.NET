@@ -73,6 +73,16 @@ namespace PresentacionGUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Empleados {
+            get {
+                object obj = ResourceManager.GetObject("Empleados", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Foto_de_perfil {
             get {
                 object obj = ResourceManager.GetObject("Foto de perfil", resourceCulture);
