@@ -31,11 +31,12 @@ namespace PresentacionGUI
         int h = 0;
         #endregion
         MedidaRepository medidaRep = new MedidaRepository(ConfigConnection.connectionString);
+        CategoriaRepository categoriaRep = new CategoriaRepository(ConfigConnection.connectionString);
         public MenuPrincipalGUI(string usuario)
         {
             InitializeComponent();
             this.lblNombre.Text = usuario;
-      
+
         }
 
         private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
@@ -53,7 +54,7 @@ namespace PresentacionGUI
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void MenuPrincipalGUI_Load(object sender, EventArgs e)
@@ -65,8 +66,8 @@ namespace PresentacionGUI
 
         private void btnRegistros_Click(object sender, EventArgs e)
         {
-            
-            
+
+
 
         }
 
@@ -99,7 +100,7 @@ namespace PresentacionGUI
         }
         void mostrarTablaMedidas()
         {
-            
+
             if (!tbMedida.Controls.Contains(tabla))
             {
                 tbMedida.Controls.Add(tabla);
@@ -199,7 +200,7 @@ namespace PresentacionGUI
         {
             if (txtNLargo.Text == "" || txtNombreCorto.Text == "")
             {
-                
+
                 return true;
             }
             else
@@ -224,7 +225,7 @@ namespace PresentacionGUI
                 txtNLargo.Text = "";
                 txtNombreCorto.Text = "";
             }
-            
+
         }
 
 
@@ -236,6 +237,38 @@ namespace PresentacionGUI
         private void tbMedida_Enter(object sender, EventArgs e)
         {
             tbMedidas.DataSource = medidaRep.ObtenerTodos();
+        }
+
+        private void tbCategorias_Enter(object sender, EventArgs e)
+        {
+            tbCag.DataSource = categoriaRep.ObtenerTodos();
+        }
+
+        private void gunaButton6_Click(object sender, EventArgs e)
+        {
+            //10
+            tbpMain.SelectTab(10);
+
+        }
+
+        private void btnIngresarCategoria_Click(object sender, EventArgs e)
+        {
+            GuardarCategoria();
+        }
+        void GuardarCategoria()
+        {
+            if (txtNombreCategoria.Text == "")
+            {
+                Menu.Show(this , "Los campos estan vacios");
+            }
+            else
+            {
+                var categoria = new Categoria();
+                categoria.Nombre = txtNombreCategoria.Text;
+                categoriaRep.Insertar(categoria);
+                tbpMain.SelectedIndex = 5;
+                Menu.Show(this , "Categoria agregada correctamente");
+            }
         }
     }
 }

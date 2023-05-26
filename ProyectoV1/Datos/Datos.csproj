@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaRepositorio.cs" />
     <Compile Include="ConnectionManager.cs" />
     <Compile Include="ICRUD.cs" />
     <Compile Include="MedidasRepositorio.cs" />
