@@ -96,6 +96,7 @@
             this.tbMedidas.HeaderBgColor = System.Drawing.Color.Empty;
             this.tbMedidas.HeaderForeColor = System.Drawing.Color.White;
             this.tbMedidas.Location = new System.Drawing.Point(3, 3);
+            this.tbMedidas.MultiSelect = false;
             this.tbMedidas.Name = "tbMedidas";
             this.tbMedidas.RowHeadersVisible = false;
             this.tbMedidas.RowTemplate.Height = 40;

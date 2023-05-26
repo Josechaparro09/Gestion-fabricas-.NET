@@ -57,15 +57,6 @@
             // 
             this.usersBindingSource.DataMember = "Users";
             // 
-            // usuarios
-            // 
-            // 
-            // usersTableAdapter
-            // 
-            // 
-            // tableAdapterManager1
-            // 
-            // 
             // usersBindingSource1
             // 
             this.usersBindingSource1.DataMember = "Users";
@@ -141,7 +132,7 @@
             this.txtUsuario.ShortcutsEnabled = true;
             this.txtUsuario.Size = new System.Drawing.Size(260, 51);
             this.txtUsuario.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsuario.TextMarginBottom = 0;
             this.txtUsuario.TextMarginLeft = 3;
@@ -218,7 +209,7 @@
             this.txtContra.ShortcutsEnabled = true;
             this.txtContra.Size = new System.Drawing.Size(260, 51);
             this.txtContra.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.txtContra.TabIndex = 2;
+            this.txtContra.TabIndex = 1;
             this.txtContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContra.TextMarginBottom = 0;
             this.txtContra.TextMarginLeft = 3;
@@ -252,7 +243,7 @@
             this.btnIngresar.OnHoverImage = null;
             this.btnIngresar.OnPressedColor = System.Drawing.Color.Black;
             this.btnIngresar.Size = new System.Drawing.Size(160, 42);
-            this.btnIngresar.TabIndex = 3;
+            this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnIngresar.Click += new System.EventHandler(this.gunaButton1_Click);
@@ -289,7 +280,7 @@
             this.btnCerrar.OnHoverImage = null;
             this.btnCerrar.OnPressedColor = System.Drawing.Color.Black;
             this.btnCerrar.Size = new System.Drawing.Size(30, 30);
-            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabIndex = 10;
             this.btnCerrar.Text = "x";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 

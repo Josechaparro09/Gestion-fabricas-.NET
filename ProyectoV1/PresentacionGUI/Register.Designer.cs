@@ -122,7 +122,7 @@
             this.btnRegistrarse.OnHoverImage = null;
             this.btnRegistrarse.OnPressedColor = System.Drawing.Color.Black;
             this.btnRegistrarse.Size = new System.Drawing.Size(160, 42);
-            this.btnRegistrarse.TabIndex = 21;
+            this.btnRegistrarse.TabIndex = 4;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
@@ -194,7 +194,7 @@
             this.txtContra.ShortcutsEnabled = true;
             this.txtContra.Size = new System.Drawing.Size(260, 51);
             this.txtContra.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.txtContra.TabIndex = 20;
+            this.txtContra.TabIndex = 2;
             this.txtContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContra.TextMarginBottom = 0;
             this.txtContra.TextMarginLeft = 3;
@@ -271,7 +271,7 @@
             this.txtUsuario.ShortcutsEnabled = true;
             this.txtUsuario.Size = new System.Drawing.Size(260, 51);
             this.txtUsuario.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.txtUsuario.TabIndex = 19;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsuario.TextMarginBottom = 0;
             this.txtUsuario.TextMarginLeft = 3;
@@ -347,7 +347,7 @@
             this.txtReContra.ShortcutsEnabled = true;
             this.txtReContra.Size = new System.Drawing.Size(260, 51);
             this.txtReContra.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.txtReContra.TabIndex = 23;
+            this.txtReContra.TabIndex = 3;
             this.txtReContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtReContra.TextMarginBottom = 0;
             this.txtReContra.TextMarginLeft = 3;
@@ -424,7 +424,7 @@
             this.txtNombre.ShortcutsEnabled = true;
             this.txtNombre.Size = new System.Drawing.Size(260, 51);
             this.txtNombre.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.txtNombre.TabIndex = 24;
+            this.txtNombre.TabIndex = 0;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNombre.TextMarginBottom = 0;
             this.txtNombre.TextMarginLeft = 3;

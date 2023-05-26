@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,7 @@ namespace PresentacionGUI
 {
     public partial class MenuPrincipalGUI : Form
     {
+        TablaMedidas tabla = new TablaMedidas();
         #region 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -27,7 +30,7 @@ namespace PresentacionGUI
         int w = 0;
         int h = 0;
         #endregion
-
+        MedidaRepository medidaRep = new MedidaRepository(ConfigConnection.connectionString);
         public MenuPrincipalGUI(string usuario)
         {
             InitializeComponent();
@@ -92,15 +95,15 @@ namespace PresentacionGUI
         private void btnMedidas_Click(object sender, EventArgs e)
         {
             tbpMain.SelectedIndex = 4;
-            var tabla = new TablaMedidas();
-
+            tbMedidas.DataSource = medidaRep.ObtenerTodos();
+        }
+        void mostrarTablaMedidas()
+        {
+            
             if (!tbMedida.Controls.Contains(tabla))
             {
                 tbMedida.Controls.Add(tabla);
             }
-            //Menu.Show(this, "Hola aaaa");
-
-
         }
 
         private void tbMedida_Click(object sender, EventArgs e)
@@ -182,8 +185,57 @@ namespace PresentacionGUI
 
         }
 
-        private void bunifuTextBox1_TextChanged_1(object sender, EventArgs e) { 
-   
+        private void lblIniciarSesion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            GuardarMedida();
+        }
+
+        bool validarVaciosMedida()
+        {
+            if (txtNLargo.Text == "" || txtNombreCorto.Text == "")
+            {
+                
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        void GuardarMedida()
+        {
+            if (validarVaciosMedida())
+            {
+                Menu.Show(this, "Rectifique los campos");
+            }
+            else
+            {
+                Medida medida = new Medida();
+                medida.NombreLargo = txtNLargo.Text;
+                medida.NombreCorto = txtNombreCorto.Text;
+                medidaRep.Insertar(medida);
+                tbpMain.SelectTab(4);
+                Menu.Show(this, "Medida registrada con exito");
+                txtNLargo.Text = "";
+                txtNombreCorto.Text = "";
+            }
+            
+        }
+
+
+        private void gunaButton5_Click(object sender, EventArgs e)
+        {
+            tbpMain.SelectTab(9);
+        }
+
+        private void tbMedida_Enter(object sender, EventArgs e)
+        {
+            tbMedidas.DataSource = medidaRep.ObtenerTodos();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Datos
 {
@@ -17,11 +18,27 @@ namespace Datos
         }
         public void Open()
         {
-            _conexion.Open();
+            try
+            {
+                _conexion.Open();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.ToString());
+                throw;
+            }
         }
         public void Close()
         {
-            _conexion.Close();
+            try
+            {
+                _conexion.Close();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.ToString());
+                throw;
+            }
         }
     }
 }

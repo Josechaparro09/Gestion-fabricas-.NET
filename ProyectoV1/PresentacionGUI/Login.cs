@@ -141,6 +141,7 @@ namespace PresentacionGUI
             {
                 var formulario = new MenuPrincipalGUI(nombre);
                 this.Hide();
+
                 formulario.ShowDialog();
                 
                 this.Close();
