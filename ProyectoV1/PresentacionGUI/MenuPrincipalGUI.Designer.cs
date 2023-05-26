@@ -67,14 +67,15 @@
             this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.pnlMenu = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.lblNombre = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblNombre = new Bunifu.UI.WinForms.BunifuLabel();
             this.Menu = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.tbpMain.SuspendLayout();
             this.tbRegistros.SuspendLayout();
             this.tbProduccion.SuspendLayout();
@@ -112,11 +113,12 @@
             this.tbpMain.Controls.Add(this.tbProveedores);
             this.tbpMain.Controls.Add(this.tbPlantas);
             this.tbpMain.Controls.Add(this.tbProductos);
+            this.tbpMain.Controls.Add(this.metroTabPage1);
             this.tbpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbpMain.Location = new System.Drawing.Point(252, 24);
             this.tbpMain.Multiline = true;
             this.tbpMain.Name = "tbpMain";
-            this.tbpMain.SelectedIndex = 0;
+            this.tbpMain.SelectedIndex = 9;
             this.tbpMain.Size = new System.Drawing.Size(823, 604);
             this.tbpMain.TabIndex = 6;
             this.tbpMain.TabStop = false;
@@ -837,6 +839,7 @@
             // tbProductos
             // 
             this.tbProductos.Controls.Add(this.gunaButton9);
+            this.tbProductos.Controls.Add(this.panel2);
             this.tbProductos.HorizontalScrollbarBarColor = true;
             this.tbProductos.HorizontalScrollbarHighlightOnWheel = false;
             this.tbProductos.HorizontalScrollbarSize = 10;
@@ -957,6 +960,22 @@
             this.bunifuPictureBox1.TabIndex = 2;
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AllowParentOverrides = false;
+            this.lblNombre.AutoEllipsis = false;
+            this.lblNombre.CursorType = null;
+            this.lblNombre.Font = new System.Drawing.Font("Poppins Medium", 15.14F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(84, 127);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNombre.Size = new System.Drawing.Size(79, 34);
+            this.lblNombre.TabIndex = 3;
+            this.lblNombre.Text = "Usuario";
+            this.lblNombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblNombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // panel1
             // 
@@ -1084,26 +1103,10 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(256, 18);
+            this.panel2.Location = new System.Drawing.Point(107, 216);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(819, 26);
             this.panel2.TabIndex = 3;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AllowParentOverrides = false;
-            this.lblNombre.AutoEllipsis = false;
-            this.lblNombre.CursorType = null;
-            this.lblNombre.Font = new System.Drawing.Font("Poppins Medium", 15.14F, System.Drawing.FontStyle.Bold);
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(84, 127);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombre.Size = new System.Drawing.Size(79, 34);
-            this.lblNombre.TabIndex = 3;
-            this.lblNombre.Text = "Usuario";
-            this.lblNombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblNombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // Menu
             // 
@@ -1174,6 +1177,20 @@
             this.Menu.WarningOptions.IconLeftMargin = 12;
             this.Menu.ZoomCloseIcon = true;
             // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(815, 562);
+            this.metroTabPage1.TabIndex = 9;
+            this.metroTabPage1.Text = "Nueva Medida";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
             // MenuPrincipalGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1183,7 +1200,6 @@
             this.Controls.Add(this.gunaControlBox3);
             this.Controls.Add(this.gunaControlBox1);
             this.Controls.Add(this.gunaControlBox2);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.tbpMain);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.menuStrip1);
@@ -1255,5 +1271,6 @@
         private System.Windows.Forms.Panel panel2;
         private Bunifu.UI.WinForms.BunifuLabel lblNombre;
         private Bunifu.UI.WinForms.BunifuSnackbar Menu;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
     }
 }

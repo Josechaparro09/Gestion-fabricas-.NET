@@ -8,5 +8,6 @@ namespace Entidades
 {
     public class Venta
     {
+
     }
 }

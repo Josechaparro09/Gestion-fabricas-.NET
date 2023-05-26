@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    public class UsuarioRepository : ICRUD<Usuario>
+    public class UsuarioRepository 
     {
         UsuarioRepositorio usuarioRep;
         public UsuarioRepository(string conexion)

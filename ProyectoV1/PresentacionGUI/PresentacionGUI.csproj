@@ -453,13 +453,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Usuarios.xsc">
-      <DependentUpon>Usuarios.xsd</DependentUpon>
-    </None>
-    <None Include="Usuarios.xsd" />
-    <None Include="Usuarios.xss">
-      <DependentUpon>Usuarios.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

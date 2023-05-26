@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class UsuarioRepositorio : ConnectionManager
+    public class UsuarioRepositorio : ConnectionManager,ICRUD<Usuario>
     {
         public UsuarioRepositorio(string connectionString) : base(connectionString)
         {
@@ -137,8 +137,9 @@ namespace Datos
             return nombre;
         }
 
-
- 
-
+        Usuario ICRUD<Usuario>.Mapper(SqlDataReader dataReader)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

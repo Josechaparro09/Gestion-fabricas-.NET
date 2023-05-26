@@ -147,7 +147,7 @@ namespace PresentacionGUI
             }
             else
             {
-                MessageBox.Show("Los datos ingresados no son correctos");
+                //MessageBox.Show("Los datos ingresados no son correctos");
                 BarraNotificacion.Show(this , "Los datos ingresados no son correctos");
             }
         }

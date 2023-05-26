@@ -91,16 +91,16 @@ namespace PresentacionGUI
 
         private void btnMedidas_Click(object sender, EventArgs e)
         {
-            //tbpMain.SelectedIndex = 4;
-            //var tabla = new TablaMedidas();
+            tbpMain.SelectedIndex = 4;
+            var tabla = new TablaMedidas();
 
-            //if (!tbMedida.Controls.Contains(tabla))
-            //{
-            //    tbMedida.Controls.Add(tabla);
-            //}
-            Menu.Show(this, "Hola aaaa");
-            
-            
+            if (!tbMedida.Controls.Contains(tabla))
+            {
+                tbMedida.Controls.Add(tabla);
+            }
+            //Menu.Show(this, "Hola aaaa");
+
+
         }
 
         private void tbMedida_Click(object sender, EventArgs e)
@@ -175,6 +175,15 @@ namespace PresentacionGUI
         private void gunaButton4_Click(object sender, EventArgs e)
         {
             tbpMain.SelectedIndex = 3;
+        }
+
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox1_TextChanged_1(object sender, EventArgs e) { 
+   
         }
     }
 }
