@@ -117,51 +117,50 @@ namespace PresentacionGUI
         private void btnCategorias_Click(object sender, EventArgs e)
         {
             tbpMain.SelectedIndex = 5;
-            var tabla = new Tabla_Categorias();
+            //var tabla = new Tabla_Categorias();
 
-            if (!tbCategorias.Controls.Contains(tabla))
-            {
-                tbCategorias.Controls.Add(tabla);
-            }
+            //if (!tbCategorias.Controls.Contains(tabla))
+            //{
+            //    tbCategorias.Controls.Add(tabla);
+            //}
         }
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             tbpMain.SelectedIndex = 6;
-            var tabla = new TablaProveedores();
+            //var tabla = new TablaProveedores();
 
-            if (!tbProveedores.Controls.Contains(tabla))
-            {
-                tbProveedores.Controls.Add(tabla);
-            }
+            //if (!tbProveedores.Controls.Contains(tabla))
+            //{
+            //    tbProveedores.Controls.Add(tabla);
+            //}
         }
 
         private void btnPlantas_Click(object sender, EventArgs e)
         {
             tbpMain.SelectedIndex = 7;
-            var tabla = new TablaPlantas();
+            //var tabla = new TablaPlantas();
 
-            if (!tbPlantas.Controls.Contains(tabla))
-            {
-                tbPlantas.Controls.Add(tabla);
-            }
+            //if (!tbPlantas.Controls.Contains(tabla))
+            //{
+            //    tbPlantas.Controls.Add(tabla);
+            //}
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
             tbpMain.SelectedIndex = 8;
-            var tabla = new TablaProductos();
+            //var tabla = new TablaProductos();
 
-            if (!tbProductos.Controls.Contains(tabla))
-            {
-                tbProductos.Controls.Add(tabla);
-            }
+            //if (!tbProductos.Controls.Contains(tabla))
+            //{
+            //    tbProductos.Controls.Add(tabla);
+            //}
         }
 
         private void gunaButton7_Click(object sender, EventArgs e)
         {
-            tbpMain.SelectTab(11
-                );
+            tbpMain.SelectTab(11);
         }
 
         private void gunaButton1_Click(object sender, EventArgs e)

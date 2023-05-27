@@ -26,20 +26,32 @@ namespace PresentacionGUI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ManueCoronel\\SQL;Initial Catalog=DB;Integrated Security=True")]
-        public string DBConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MANUECORONEL\\SQL;Initial Catalog=FabricaDB;Integrated Security=True")]
+        public string FabricaDBConnectionString {
             get {
-                return ((string)(this["DBConnectionString"]));
+                return ((string)(this["FabricaDBConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MANUECORONEL\\SQL;Initial Catalog=FabricaDB;Integrated Security=True")]
-        public string FabricaDBConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MANUECORONEL\\SQL;Initial Catalog=DB;Integrated Security=True")]
+        public string DBConnectionString {
             get {
-                return ((string)(this["FabricaDBConnectionString"]));
+                return ((string)(this["DBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool asd {
+            get {
+                return ((bool)(this["asd"]));
+            }
+            set {
+                this["asd"] = value;
             }
         }
     }
