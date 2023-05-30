@@ -43,8 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaRepository.cs" />
+    <Compile Include="EmpleadoRepository.cs" />
     <Compile Include="IOpcionesListas.cs" />
     <Compile Include="MedidaRepository.cs" />
+    <Compile Include="MPrimaRepository.cs" />
+    <Compile Include="PlantaRepository.cs" />
+    <Compile Include="ProductoRepository.cs" />
     <Compile Include="ProveedorRepository.cs" />
     <Compile Include="UsuarioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

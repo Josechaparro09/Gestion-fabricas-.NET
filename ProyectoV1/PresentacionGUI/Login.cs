@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Logica;
+using RestSharp.Extensions;
 
 namespace PresentacionGUI
 {
@@ -148,8 +149,10 @@ namespace PresentacionGUI
             }
             else
             {
+
+                
                 //MessageBox.Show("Los datos ingresados no son correctos");
-                BarraNotificacion.Show(this , "Los datos ingresados no son correctos");
+                BarraNotificacion.Show(this , "Los datos ingresados no son correctos", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
         }
     }

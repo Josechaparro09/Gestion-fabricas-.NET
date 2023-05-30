@@ -15,7 +15,7 @@ namespace Datos
         {
         }
 
-        public void Actualizar(Medida medida, int id)
+        public int Actualizar(Medida medida, int id)
         {
             using (var Comando = _conexion.CreateCommand())
             {
@@ -25,8 +25,9 @@ namespace Datos
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
 
                 Open();
-                Comando.ExecuteNonQuery();
+                var filas = Comando.ExecuteNonQuery();
                 Close();
+                return filas;
             }
         }
 
@@ -122,6 +123,27 @@ namespace Datos
             }
             Close();
             return medida;
+        }
+        public Medida ObtenerPorIndex(int index)
+        {
+            var lista = GetAll();
+
+            return lista[index];
+        }
+        public int ObtenerIndexPorId(int id)
+        {
+            var lista = GetAll();
+            int cont = 0;
+            foreach (var item in lista)
+            {
+
+                if (item.Id == id)
+                {
+                    return cont;
+                }
+                cont++;
+            }
+            return -1;
         }
     }
 }

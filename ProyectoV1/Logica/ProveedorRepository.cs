@@ -15,9 +15,9 @@ namespace Logica
         {
             provRep = new ProveedorRepositorio(conexion);
         }
-        public void Actualizar(Proveedores proveedor, int id)
+        public int Actualizar(Proveedores proveedor, int id)
         {
-            provRep.Actualizar(proveedor, id);
+            return provRep.Actualizar(proveedor, id);
         }
 
         public void Eliminar(int id)
@@ -43,6 +43,14 @@ namespace Logica
         public bool Existe(string proveedor)
         {
             return provRep.Existe(proveedor);
+        }
+        public Proveedores ObtenerPorIndex(int index)
+        {
+            return provRep.ObtenerPorIndex(index);
+        }
+        public int ObtenerIndexPorId(int id)
+        {
+            return provRep.ObtenerIndexPorId(id);
         }
     }
 }

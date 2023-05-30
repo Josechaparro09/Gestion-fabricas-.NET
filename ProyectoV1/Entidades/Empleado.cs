@@ -8,11 +8,10 @@ namespace Entidades
 {
     public class Empleado
     {
+        public int Id { get; set; }
         public string Cedula { get; set; }
-        public string PNombre { get; set; }
-        public string SNombre { get; set; }
-        public string PApellido { get; set; }
-        public string SApellido { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaIngreso { get; set; }
 
@@ -21,19 +20,19 @@ namespace Entidades
            
         }
 
-        public Empleado(string cedula, string pNombre, string sNombre, string pApellido, string sApellido, string telefono, DateTime fechaIngreso)
+        public Empleado(int id , string cedula, string nombre, string apellido, string telefono, DateTime fechaIngreso)
         {
+            Id = id;
             Cedula = cedula;
-            PNombre = pNombre;
-            SNombre = sNombre;
-            PApellido = pApellido;
-            SApellido = sApellido;
+            Nombre = nombre;
+            Apellido = apellido;
             Telefono = telefono;
             FechaIngreso = fechaIngreso;
         }
+
         public override string ToString()
         {
-            return $"\nEmpleado:{Cedula};{PNombre};{SNombre};{PApellido};{SApellido};{Telefono};{FechaIngreso.ToShortDateString()}";
+            return $"\nEmpleado:{Cedula};{Telefono};{FechaIngreso.ToShortDateString()}";
         }
     }
 }

@@ -326,12 +326,12 @@
             this.BarraNotificacion.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BarraNotificacion.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BarraNotificacion.InformationOptions.ActionBorderRadius = 1;
-            this.BarraNotificacion.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.BarraNotificacion.InformationOptions.ActionFont = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BarraNotificacion.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
             this.BarraNotificacion.InformationOptions.BackColor = System.Drawing.Color.White;
             this.BarraNotificacion.InformationOptions.BorderColor = System.Drawing.Color.White;
             this.BarraNotificacion.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.BarraNotificacion.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.BarraNotificacion.InformationOptions.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BarraNotificacion.InformationOptions.ForeColor = System.Drawing.Color.Black;
             this.BarraNotificacion.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
             this.BarraNotificacion.InformationOptions.IconLeftMargin = 12;

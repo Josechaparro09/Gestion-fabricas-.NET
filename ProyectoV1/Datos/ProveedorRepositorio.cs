@@ -15,20 +15,20 @@ namespace Datos
         {
         }
 
-        public void Actualizar(Proveedores proveedor, int id)
+        public int Actualizar(Proveedores proveedor, int id)
         {
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = $"Update Proveedores set Nombre = @Nombre , Telefono = @Telefono , Direccion = @Direccion, FRegistro = @FRegistro WHERE Id= @id";
+                Comando.CommandText = $"Update Proveedores set Nombre = @Nombre , Telefono = @Telefono , Direccion = @Direccion WHERE Id= @id";
                 Comando.Parameters.Add("Nombre", SqlDbType.VarChar).Value = proveedor.Nombre;
                 Comando.Parameters.Add("Telefono", SqlDbType.VarChar).Value = proveedor.Telefono;
                 Comando.Parameters.Add("Direccion", SqlDbType.VarChar).Value = proveedor.Direccion;
-                Comando.Parameters.Add("FRegistro", SqlDbType.DateTime).Value = proveedor.FRegistro;
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
 
                 Open();
-                Comando.ExecuteNonQuery();
+                var filas = Comando.ExecuteNonQuery();
                 Close();
+                return filas;
             }
         }
 
@@ -125,5 +125,28 @@ namespace Datos
             Close();
             return proveedor;
         }
+
+        public Proveedores ObtenerPorIndex(int index)
+        {
+            var lista = GetAll();
+
+            return lista[index];
+        }
+        public int ObtenerIndexPorId(int id)
+        {
+            var lista = GetAll();
+            int cont = 0;
+            foreach (var item in lista)
+            {
+
+                if (item.Id == id)
+                {
+                    return cont;
+                }
+                cont++;
+            }
+            return -1;
+        }
+
     }
 }

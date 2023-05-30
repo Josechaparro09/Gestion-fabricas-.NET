@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Planta
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public Empleado EmpleadoAsignado { get; set; }
 
@@ -16,7 +16,7 @@ namespace Entidades
         {
         }
 
-        public Planta(string id, string nombre, Empleado empleadoAsignado)
+        public Planta(int id, string nombre, Empleado empleadoAsignado)
         {
             Id = id;
             Nombre = nombre;

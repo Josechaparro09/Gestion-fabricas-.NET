@@ -60,7 +60,7 @@ namespace Datos
             return usuario;
 
         }
-        public void Actualizar(Usuario usuario , int id)
+        public int Actualizar(Usuario usuario , int id)
         {
             using (var Comando = _conexion.CreateCommand())
             {
@@ -72,8 +72,9 @@ namespace Datos
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
 
                 Open();
-                Comando.ExecuteNonQuery();
+                var filas = Comando.ExecuteNonQuery();
                 Close();
+                return filas;
             }
         }
         public void Eliminar(int id)
@@ -140,6 +141,27 @@ namespace Datos
         Usuario ICRUD<Usuario>.Mapper(SqlDataReader dataReader)
         {
             throw new NotImplementedException();
+        }
+        public Usuario ObtenerPorIndex(int index)
+        {
+            var lista = GetAll();
+
+            return lista[index];
+        }
+        public int ObtenerIndexPorId(int id)
+        {
+            var lista = GetAll();
+            int cont = 0;
+            foreach (var item in lista)
+            {
+
+                if (item.Id == id)
+                {
+                    return cont;
+                }
+                cont++;
+            }
+            return -1;
         }
     }
 }

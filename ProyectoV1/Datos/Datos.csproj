@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="Oracle.DataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Windows.Forms" />
@@ -47,8 +48,12 @@
   <ItemGroup>
     <Compile Include="CategoriaRepositorio.cs" />
     <Compile Include="ConnectionManager.cs" />
+    <Compile Include="EmpleadoRepositorio.cs" />
     <Compile Include="ICRUD.cs" />
     <Compile Include="MedidasRepositorio.cs" />
+    <Compile Include="MPrimaRepositorio.cs" />
+    <Compile Include="PlantaRepositorio.cs" />
+    <Compile Include="ProductoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorRepositorio.cs" />
     <Compile Include="UsuarioRepositorio.cs" />

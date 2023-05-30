@@ -15,7 +15,7 @@ namespace Datos
         {
         }
 
-        public void Actualizar(Categoria categoria, int id)
+        public int Actualizar(Categoria categoria, int id)
         {
             using (var Comando = _conexion.CreateCommand())
             {
@@ -24,8 +24,9 @@ namespace Datos
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
 
                 Open();
-                Comando.ExecuteNonQuery();
+                var filas = Comando.ExecuteNonQuery();
                 Close();
+                return filas;
             }
         }
 
@@ -114,6 +115,26 @@ namespace Datos
             }
             Close();
             return categoria;
+        }
+        public Categoria ObtenerPorIndex(int index)
+        {
+            var lista = GetAll();
+
+            return lista[index];
+        }
+        public int ObtenerIndexPorId(int id)
+        {
+            var lista = GetAll();
+            int cont = 0;
+            foreach (var item in lista)
+            {
+                if (item.Id == id)
+                {
+                    return cont;
+                }
+                cont++;
+            }
+            return -1;
         }
     }
 }

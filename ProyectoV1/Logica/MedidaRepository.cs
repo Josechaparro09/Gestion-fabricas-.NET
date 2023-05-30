@@ -15,9 +15,9 @@ namespace Logica
         {
             medidasRepositorio = new MedidasRepositorio(conexion);
         }
-        public void Actualizar(Medida medida, int id)
+        public int Actualizar(Medida medida, int id)
         {
-            medidasRepositorio.Actualizar(medida, id);
+            return medidasRepositorio.Actualizar(medida, id);
         }
 
         public void Eliminar(int id)
@@ -45,6 +45,14 @@ namespace Logica
             return medidasRepositorio.Existe(usuario);
         }
 
+        public Medida ObtenerPorIndex(int index)
+        {
+            return medidasRepositorio.ObtenerPorIndex(index);
+        }
+        public int ObtenerIndexPorId(int id)
+        {
+            return medidasRepositorio.ObtenerIndexPorId(id);
+        }
 
 
     }

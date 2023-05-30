@@ -16,9 +16,9 @@ namespace Logica
             usuarioRep = new UsuarioRepositorio(conexion);
         }
 
-        public void Actualizar(Usuario usuario , int id)
+        public int Actualizar(Usuario usuario , int id)
         {
-            usuarioRep.Actualizar(usuario , id);
+            return usuarioRep.Actualizar(usuario , id);
         }
 
         public void Eliminar(int id)

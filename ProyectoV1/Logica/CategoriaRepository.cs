@@ -15,9 +15,9 @@ namespace Logica
         {
             categoriaRep = new CategoriaRepositorio(conexion);
         }
-        public void Actualizar(Categoria categoria, int id)
+        public int Actualizar(Categoria categoria, int id)
         {
-            categoriaRep.Actualizar(categoria, id);
+            return categoriaRep.Actualizar(categoria, id);
         }
 
         public void Eliminar(int id)
@@ -43,6 +43,14 @@ namespace Logica
         public bool Existe(string categoria)
         {
             return categoriaRep.Existe(categoria);
+        }
+        public Categoria ObtenerPorIndex(int index)
+        {
+            return categoriaRep.ObtenerPorIndex(index);
+        }
+        public int ObtenerIndexPorId(int id)
+        {
+            return categoriaRep.ObtenerIndexPorId(id);
         }
     }
 }

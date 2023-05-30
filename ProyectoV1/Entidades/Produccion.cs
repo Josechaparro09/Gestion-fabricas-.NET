@@ -8,33 +8,34 @@ namespace Entidades
 {
     public class Produccion
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public int cantidadProducida { get; set; }
         public Medida MedidaProduccion { get; set; }
         public Planta PlantaEncargada { get; set; }
-        public Producto ProductoProducido { get; set; }
-        public MateriaPrima MateriaPrimaUtilizada { get; set; }
+        public List<ProductoProducido> ProductosProducidos { get; set; }
+        public List<MateriaPrimaUtilizada> MateriaPrimaUtilizada { get; set; }
         public DateTime FechaProduccion { get; set; }
 
         public Produccion()
         {
         }
 
-        public Produccion(string id, string nombre, int cantidadProducida, Medida medidaProduccion, Planta plantaEncargada, Producto productoProducido, MateriaPrima materiaPrimaUtilizada, DateTime fechaProduccion)
+        public Produccion(int id, string nombre, int cantidadProducida, Medida medidaProduccion, Planta plantaEncargada, List<ProductoProducido> productosProducidos, List<MateriaPrimaUtilizada> materiaPrimaUtilizada, DateTime fechaProduccion)
         {
             Id = id;
             Nombre = nombre;
             this.cantidadProducida = cantidadProducida;
             MedidaProduccion = medidaProduccion;
             PlantaEncargada = plantaEncargada;
-            ProductoProducido = productoProducido;
+            ProductosProducidos = productosProducidos;
             MateriaPrimaUtilizada = materiaPrimaUtilizada;
             FechaProduccion = fechaProduccion;
         }
-        public override string ToString()
-        {
-            return $"\nProduccion: {Id};{Nombre};{cantidadProducida};{MedidaProduccion};{PlantaEncargada};{ProductoProducido};{MateriaPrimaUtilizada};{FechaProduccion.ToShortDateString()}";
-        }
+
+        //public override string ToString()
+        //{
+        //    return $"\nProduccion: {Id};{Nombre};{cantidadProducida};{MedidaProduccion};{PlantaEncargada};{ProductoProducido};{MateriaPrimaUtilizada};{FechaProduccion.ToShortDateString()}";
+        //}
     }
 }
