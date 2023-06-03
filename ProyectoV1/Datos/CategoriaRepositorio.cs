@@ -34,7 +34,9 @@ namespace Datos
         {
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = $"DELETE FROM Categorias WHERE Id = @id";
+                //Comando.CommandText = $"DELETE FROM Categorias WHERE Id = @id";
+                Comando.CommandText = $"Update Categorias set Estado = 0 WHERE Id = @id";
+
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
                 Open();
                 Comando.ExecuteNonQuery();
@@ -64,7 +66,7 @@ namespace Datos
         {
             List<Categoria> categorias = new List<Categoria>();
             var comando = _conexion.CreateCommand();
-            comando.CommandText = "select * from Categorias";
+            comando.CommandText = "select * from Categorias WHERE Estado = 1";
             Open();
             SqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
@@ -80,8 +82,8 @@ namespace Datos
             int rows;
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = "Insert Into Categorias (Nombre)" +
-                " values (@Nombre)";
+                Comando.CommandText = "Insert Into Categorias (Nombre,Estado)" +
+                " values (@Nombre,1)";
                 Comando.Parameters.Add("Nombre", SqlDbType.VarChar).Value = categoria.Nombre;
                 Open();
                 rows = Comando.ExecuteNonQuery();
@@ -93,9 +95,10 @@ namespace Datos
         public Categoria Mapper(SqlDataReader dataReader)
         {
             if (!dataReader.HasRows) return null;
-            Categoria categoria = new Categoria();
+            var categoria = new Categoria();
             categoria.Id = dataReader.GetInt32(0);
             categoria.Nombre = dataReader.GetString(1);
+            categoria.Estado = dataReader.GetBoolean(2);
             return categoria;
         }
 

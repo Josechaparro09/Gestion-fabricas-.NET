@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Datos
 {
@@ -35,7 +36,8 @@ namespace Datos
         {
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = $"DELETE FROM Medidas WHERE Id = @id";
+                //Comando.CommandText = $"DELETE FROM Medidas WHERE Id = @id";
+                Comando.CommandText = $"UPDATE Medidas SET Estado = 0 WHERE Id = @id";
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
 
                 Open();
@@ -69,7 +71,7 @@ namespace Datos
         {
             List<Medida> medidas = new List<Medida>();
             var comando = _conexion.CreateCommand();
-            comando.CommandText = "select * from Medidas";
+            comando.CommandText = "select * from Medidas WHERE Estado = 1";
             Open();
             SqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
@@ -86,10 +88,11 @@ namespace Datos
             int rows;
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = "Insert Into Medidas (NCorto,NLargo)" +
-                " values (@NCorto,@NLargo)";
+                Comando.CommandText = "Insert Into Medidas (NCorto,NLargo,Estado)" +
+                " values (@NCorto,@NLargo,@Estado)";
                 Comando.Parameters.Add("NCorto", SqlDbType.VarChar).Value = medida.NombreCorto;
                 Comando.Parameters.Add("NLargo", SqlDbType.VarChar).Value = medida.NombreLargo;
+                Comando.Parameters.Add("Estado", SqlDbType.Bit).Value = true;
 
                 Open();
                 rows = Comando.ExecuteNonQuery();
@@ -105,6 +108,7 @@ namespace Datos
             medida.Id = dataReader.GetInt32(0);
             medida.NombreCorto = dataReader.GetString(1);
             medida.NombreLargo = dataReader.GetString(2);
+            medida.Estado = dataReader.GetBoolean(3);
             return medida;
         }
 

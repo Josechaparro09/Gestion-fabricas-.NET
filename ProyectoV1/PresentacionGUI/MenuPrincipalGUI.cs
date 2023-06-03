@@ -174,10 +174,24 @@ namespace PresentacionGUI
             editar = false;
             LimpiarProveedores();
         }
-
+        void CerrarFormularios()
+        {
+            foreach (Form formulario in this.MdiChildren)
+            {
+                formulario.Close();
+            }
+        }
         private void gunaButton1_Click(object sender, EventArgs e)
         {
-            tbpMain.SelectedIndex = 0;
+
+            CerrarFormularios();
+            //tbpMain.SelectedIndex = 0;
+            var f = new RegistrosGUI();
+            if (f.MdiParent!=this)
+            {
+                f.MdiParent = this;
+                f.Show();
+            }
         }
 
         private void gunaButton2_Click(object sender, EventArgs e)
@@ -187,7 +201,14 @@ namespace PresentacionGUI
 
         private void gunaButton3_Click(object sender, EventArgs e)
         {
-            tbpMain.SelectedIndex = 2;
+            //tbpMain.SelectedIndex = 2;
+            CerrarFormularios();
+            var f = new InsumosGUI();
+            if (f.MdiParent != this)
+            {
+                f.MdiParent = this;
+                f.Show();
+            }
         }
 
         private void gunaButton4_Click(object sender, EventArgs e)
@@ -226,7 +247,7 @@ namespace PresentacionGUI
 
         bool validarNumero(string cadena)
         {
-            return int.TryParse(cadena , out int numero);
+            return double.TryParse(cadena , out double numero);
         }
 
         private void gunaButton5_Click(object sender, EventArgs e)
@@ -260,7 +281,7 @@ namespace PresentacionGUI
             GuardarCategoria();
         }
 
-        #region Guardar
+        #region _Guardar
         void GuardarMedida()
         {
             if (validarVaciosMedida())
@@ -271,7 +292,7 @@ namespace PresentacionGUI
             {
                 if (!editar)
                 {
-                    Medida medida = new Medida();
+                    var medida = new Medida();
                     medida.NombreLargo = txtNLargo.Text;
                     medida.NombreCorto = txtNombreCorto.Text;
                     medidaRep.Insertar(medida);
@@ -916,7 +937,7 @@ namespace PresentacionGUI
             if (resultado == DialogResult.Yes)
             {
                 var prod = new Producto();
-                prod.Nombre = txtNombrePlanta.Text;
+                prod.Nombre = txtNombreProd.Text;
                 prod.CategoriaProducto = categoriaRep.ObtenerPorIndex(cbxCategoriaProd.SelectedIndex);
                 prod.MedidaProducto = medidaRep.ObtenerPorIndex(cbxMedidaProd.SelectedIndex);
                 prod.Presentacion = txtPresentacionProd.Text;

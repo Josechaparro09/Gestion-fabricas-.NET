@@ -36,7 +36,9 @@ namespace Datos
         {
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = $"DELETE FROM Plantas WHERE Id = @id";
+                //Comando.CommandText = $"DELETE FROM Plantas WHERE Id = @id";
+                Comando.CommandText = $"Update Plantas set Estado = 0 WHERE Id = @id";
+
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
 
                 Open();
@@ -67,7 +69,7 @@ namespace Datos
         {
             var plantas = new List<Planta>();
             var comando = _conexion.CreateCommand();
-            comando.CommandText = "select * from Plantas";
+            comando.CommandText = "select * from Plantas WHERE Estado = 1";
             Open();
             SqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
@@ -83,8 +85,8 @@ namespace Datos
             int rows;
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = "Insert Into Plantas (Nombre,IdEmpleado)" +
-                " values (@Nombre,@IdEmpleado)";
+                Comando.CommandText = "Insert Into Plantas (Nombre,IdEmpleado,Estado)" +
+                " values (@Nombre,@IdEmpleado,1)";
                 Comando.Parameters.Add("Nombre", SqlDbType.VarChar).Value = planta.Nombre;
                 Comando.Parameters.Add("IdEmpleado", SqlDbType.VarChar).Value = planta.EmpleadoAsignado.Id;
                 Open();
@@ -103,6 +105,8 @@ namespace Datos
             planta.Id = dataReader.GetInt32(0);
             planta.Nombre = dataReader.GetString(1);
             planta.EmpleadoAsignado = empRep.ObtenerPorId(dataReader.GetInt32(2));
+            planta.Estado = dataReader.GetBoolean(3);
+
             return planta;
         }
 

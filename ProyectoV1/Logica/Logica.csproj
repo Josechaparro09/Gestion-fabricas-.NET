@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="CategoriaRepository.cs" />
     <Compile Include="EmpleadoRepository.cs" />
-    <Compile Include="IOpcionesListas.cs" />
     <Compile Include="MedidaRepository.cs" />
     <Compile Include="MPrimaRepository.cs" />
     <Compile Include="PlantaRepository.cs" />
@@ -52,15 +51,6 @@
     <Compile Include="ProveedorRepository.cs" />
     <Compile Include="UsuarioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServicioCategoria.cs" />
-    <Compile Include="ServicioEmpleado.cs" />
-    <Compile Include="ServicioFabrica.cs" />
-    <Compile Include="ServicioMateriaPrima.cs" />
-    <Compile Include="ServicioMedida.cs" />
-    <Compile Include="ServicioPlanta.cs" />
-    <Compile Include="ServicioProduccion.cs" />
-    <Compile Include="ServicioProducto.cs" />
-    <Compile Include="ServicioVenta.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">

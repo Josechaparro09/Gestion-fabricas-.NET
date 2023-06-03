@@ -22,11 +22,12 @@ namespace Datos
                 Comando.CommandText = $"Update Productos set Nombre = @Nombre , Presentacion = @Presentacion , CostoProduccion = @CostoProduccion , PrecioVenta = @PrecioVenta , IdCategoria = @IdCategoria , IdMedida = @IdMedida , Ganancia = @Ganancia WHERE Id= @id";
                 Comando.Parameters.Add("Nombre", SqlDbType.VarChar).Value = producto.Nombre;
                 Comando.Parameters.Add("Presentacion", SqlDbType.VarChar).Value = producto.Presentacion;
-                Comando.Parameters.Add("CostoProduccion", SqlDbType.VarChar).Value = producto.CostoProduccion;
-                Comando.Parameters.Add("PrecioVenta", SqlDbType.VarChar).Value = producto.PrecioVenta;
-                Comando.Parameters.Add("IdCategoria", SqlDbType.VarChar).Value = producto.CategoriaProducto.Id;
-                Comando.Parameters.Add("IdMedida", SqlDbType.VarChar).Value = producto.MedidaProducto.Id;
-                Comando.Parameters.Add("Ganancia", SqlDbType.VarChar).Value = producto.Ganancia;
+                Comando.Parameters.Add("CostoProduccion", SqlDbType.Decimal).Value = producto.CostoProduccion;
+                Comando.Parameters.Add("PrecioVenta", SqlDbType.Decimal).Value = producto.PrecioVenta;
+                Comando.Parameters.Add("IdCategoria", SqlDbType.Int).Value = producto.CategoriaProducto.Id;
+                Comando.Parameters.Add("IdMedida", SqlDbType.Int).Value = producto.MedidaProducto.Id;
+                producto.Ganancia = producto.PrecioVenta - producto.CostoProduccion;
+                Comando.Parameters.Add("Ganancia", SqlDbType.Decimal).Value = producto.Ganancia;
 
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
 
@@ -41,7 +42,8 @@ namespace Datos
         {
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = $"DELETE FROM Productos WHERE Id = @id";
+                //Comando.CommandText = $"DELETE FROM Productos WHERE Id = @id";
+                Comando.CommandText = $"Update Productos set Estado = 0 WHERE Id = @id";
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
 
                 Open();
@@ -72,7 +74,7 @@ namespace Datos
         {
             var productos = new List<Producto>();
             var comando = _conexion.CreateCommand();
-            comando.CommandText = "select * from Productos";
+            comando.CommandText = "select * from Productos WHERE Estado = 1";
             Open();
             SqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
@@ -88,16 +90,16 @@ namespace Datos
             int rows;
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = "Insert Into Productos (Nombre,Presentacion,CostoProduccion,PrecioVenta,IdCategoria,IdMedida,Ganancia)" +
-                " values (@Nombre,@Presentacion,@CostoProduccion,@PrecioVenta,@IdCategoria,@IdMedida,@Ganancia)";
+                Comando.CommandText = "Insert Into Productos (Nombre,Presentacion,CostoProduccion,PrecioVenta,IdCategoria,IdMedida,Ganancia,Estado)" +
+                " values (@Nombre,@Presentacion,@CostoProduccion,@PrecioVenta,@IdCategoria,@IdMedida,@Ganancia, 1)";
                 Comando.Parameters.Add("Nombre", SqlDbType.VarChar).Value = producto.Nombre;
                 Comando.Parameters.Add("Presentacion", SqlDbType.VarChar).Value = producto.Presentacion;
-                Comando.Parameters.Add("CostoProduccion", SqlDbType.VarChar).Value = producto.CostoProduccion;
-                Comando.Parameters.Add("PrecioVenta", SqlDbType.VarChar).Value = producto.PrecioVenta;
-                Comando.Parameters.Add("IdCategoria", SqlDbType.VarChar).Value = producto.CategoriaProducto.Id;
-                Comando.Parameters.Add("IdMedida", SqlDbType.VarChar).Value = producto.MedidaProducto.Id;
+                Comando.Parameters.Add("CostoProduccion", SqlDbType.Decimal).Value = producto.CostoProduccion;
+                Comando.Parameters.Add("PrecioVenta", SqlDbType.Decimal).Value = producto.PrecioVenta;
+                Comando.Parameters.Add("IdCategoria", SqlDbType.Int).Value = producto.CategoriaProducto.Id;
+                Comando.Parameters.Add("IdMedida", SqlDbType.Int).Value = producto.MedidaProducto.Id;
                 producto.Ganancia = producto.PrecioVenta-producto.CostoProduccion;
-                Comando.Parameters.Add("Ganancia", SqlDbType.VarChar).Value = producto.Ganancia;
+                Comando.Parameters.Add("Ganancia", SqlDbType.Decimal).Value = producto.Ganancia;
 
                 Open();
                 rows = Comando.ExecuteNonQuery();
@@ -121,6 +123,8 @@ namespace Datos
             prod.CategoriaProducto = catRep.ObtenerPorId(dataReader.GetInt32(5));
             prod.MedidaProducto = medRep.ObtenerPorId(dataReader.GetInt32(6));
             prod.Ganancia = (double)dataReader.GetDecimal(7);
+            prod.Estado = dataReader.GetBoolean(8);
+
 
             return prod;
         }

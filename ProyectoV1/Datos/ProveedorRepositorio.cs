@@ -36,7 +36,8 @@ namespace Datos
         {
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = $"DELETE FROM Proveedores WHERE Id = @id";
+                //Comando.CommandText = $"DELETE FROM Proveedores WHERE Id = @id";
+                Comando.CommandText = $"Update Proveedores set Estado = 0 WHERE Id = @id";
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
 
                 Open();
@@ -67,7 +68,7 @@ namespace Datos
         {
             var proveedores = new List<Proveedores>();
             var comando = _conexion.CreateCommand();
-            comando.CommandText = "select * from Proveedores";
+            comando.CommandText = "select * from Proveedores WHERE Estado = 1";
             Open();
             SqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
@@ -83,8 +84,8 @@ namespace Datos
             int rows;
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = "Insert Into Proveedores (Nombre,Telefono,Direccion,FRegistro)" +
-                " values (@Nombre,@Telefono,@Direccion,@FRegistro)";
+                Comando.CommandText = "Insert Into Proveedores (Nombre,Telefono,Direccion,FRegistro,Estado)" +
+                " values (@Nombre,@Telefono,@Direccion,@FRegistro,1)";
                 Comando.Parameters.Add("Nombre", SqlDbType.VarChar).Value = proveedor.Nombre;
                 Comando.Parameters.Add("Telefono", SqlDbType.VarChar).Value = proveedor.Telefono;
                 Comando.Parameters.Add("Direccion", SqlDbType.VarChar).Value = proveedor.Direccion;
@@ -106,6 +107,7 @@ namespace Datos
             proveedor.Telefono = dataReader.GetString(2);
             proveedor.Direccion = dataReader.GetString(3);
             proveedor.FRegistro = dataReader.GetDateTime(4);
+            proveedor.Estado = dataReader.GetBoolean(5);
             return proveedor;
         }
 

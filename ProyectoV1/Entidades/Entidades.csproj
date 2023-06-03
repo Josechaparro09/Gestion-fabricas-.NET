@@ -55,6 +55,7 @@
     <Compile Include="ProductoProducido.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedores.cs" />
+    <Compile Include="RecetaDeProduccion.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Venta.cs" />
   </ItemGroup>

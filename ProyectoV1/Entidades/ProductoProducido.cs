@@ -11,18 +11,17 @@ namespace Entidades
         public int Id { get; set; }
         public Producto Producto { get; set; }
         public int CantidadProducto { get; set; }
-        public Produccion Produccion { get; set; }
 
         public ProductoProducido()
         {
             
         }
-        public ProductoProducido(int id, Producto producto, int cantidadProducto, Produccion produccion)
+        public ProductoProducido(int id, Producto producto, int cantidadProducto)
         {
             Id = id;
             Producto = producto;
             CantidadProducto = cantidadProducto;
-            Produccion = produccion;
+
         }
     }
 }

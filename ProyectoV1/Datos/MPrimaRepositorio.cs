@@ -39,7 +39,9 @@ namespace Datos
         {
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = $"DELETE FROM MateriasPrimas WHERE Id = @id";
+                //Comando.CommandText = $"DELETE FROM MateriasPrimas WHERE Id = @id";
+                Comando.CommandText = $"Update MateriasPrimas set Estado = 0 WHERE Id = @id";
+
                 Comando.Parameters.Add("id", SqlDbType.Int).Value = id;
 
                 Open();
@@ -70,7 +72,7 @@ namespace Datos
         {
             var mprima = new List<MateriaPrima>();
             var comando = _conexion.CreateCommand();
-            comando.CommandText = "select * from MateriasPrimas";
+            comando.CommandText = "select * from MateriasPrimas WHERE Estado = 1";
             Open();
             SqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
@@ -86,8 +88,8 @@ namespace Datos
             int rows;
             using (var Comando = _conexion.CreateCommand())
             {
-                Comando.CommandText = "Insert Into MateriasPrimas (Nombre,FechaCompra,FechaExpiracion,IdMedida,IdProveedor)" +
-                " values (@Nombre,@FCompra,@FExpiracion,@IdMedida,@IdProveedor)";
+                Comando.CommandText = "Insert Into MateriasPrimas (Nombre,FechaCompra,FechaExpiracion,IdMedida,IdProveedor,Estado)" +
+                " values (@Nombre,@FCompra,@FExpiracion,@IdMedida,@IdProveedor,1)";
                 Comando.Parameters.Add("Nombre", SqlDbType.VarChar).Value = mprima.Nombre;
                 Comando.Parameters.Add("FCompra", SqlDbType.DateTime).Value = DateTime.Now;
                 Comando.Parameters.Add("FExpiracion", SqlDbType.DateTime).Value = mprima.FechaExpiracion;
@@ -95,16 +97,8 @@ namespace Datos
                 Comando.Parameters.Add("IdProveedor", SqlDbType.Int).Value = mprima.Proveedor.Id;
 
                 Open();
-                
-                try
-                {
-                    rows = Comando.ExecuteNonQuery();
-                }
-                catch (System.Data.SqlTypes.SqlTypeException e)
-                {
-                    MessageBox.Show("FExp: " + mprima.FechaExpiracion.ToString() + "FIng: " + mprima.FechaCompra.ToString() + e.ToString());
-                    throw;
-                }
+
+                rows = Comando.ExecuteNonQuery();
                 Close();
             }
             return rows;
@@ -123,6 +117,7 @@ namespace Datos
             mprima.FechaExpiracion = dataReader.GetDateTime(3);
             mprima.Medida = medRep.ObtenerPorId(dataReader.GetInt32(4));
             mprima.Proveedor = provRep.ObtenerPorId(dataReader.GetInt32(5));
+            mprima.Estado = dataReader.GetBoolean(6);
 
             return mprima;
         }

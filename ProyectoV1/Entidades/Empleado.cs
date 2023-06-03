@@ -14,13 +14,14 @@ namespace Entidades
         public string Apellido { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaIngreso { get; set; }
+        public bool Estado { get; set; }
 
         public Empleado()
         {
            
         }
 
-        public Empleado(int id , string cedula, string nombre, string apellido, string telefono, DateTime fechaIngreso)
+        public Empleado(int id, string cedula, string nombre, string apellido, string telefono, DateTime fechaIngreso, bool estado)
         {
             Id = id;
             Cedula = cedula;
@@ -28,6 +29,7 @@ namespace Entidades
             Apellido = apellido;
             Telefono = telefono;
             FechaIngreso = fechaIngreso;
+            Estado = estado;
         }
 
         public override string ToString()

@@ -16,13 +16,14 @@ namespace Entidades
         public Proveedores Proveedor { get; set; }
         public DateTime FechaCompra { get; set; }
         public DateTime FechaExpiracion { get; set; }
+        public bool Estado { get; set; }
 
 
         public MateriaPrima()
         {
         }
 
-        public MateriaPrima(int id, string nombre, Medida medida, Proveedores proveedor, DateTime fechaCompra, DateTime fechaExpiracion)
+        public MateriaPrima(int id, string nombre, Medida medida, Proveedores proveedor, DateTime fechaCompra, DateTime fechaExpiracion, bool estado)
         {
             Id = id;
             Nombre = nombre;
@@ -30,7 +31,10 @@ namespace Entidades
             Proveedor = proveedor;
             FechaCompra = fechaCompra;
             FechaExpiracion = fechaExpiracion;
+            Estado = estado;
         }
+
+
 
 
 

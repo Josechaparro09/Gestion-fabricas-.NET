@@ -13,18 +13,20 @@ namespace Entidades
         public string Telefono { get; set; }
         public string Direccion { get; set; }
         public DateTime FRegistro { get; set; }
+        public bool Estado { get; set; }
 
         public Proveedores()
         {
         }
 
-        public Proveedores(int id, string nombre, string telefono, string direccion, DateTime fregistro)
+        public Proveedores(int id, string nombre, string telefono, string direccion, DateTime fRegistro, bool estado)
         {
             Id = id;
             Nombre = nombre;
             Telefono = telefono;
             Direccion = direccion;
-            FRegistro = fregistro;
+            FRegistro = fRegistro;
+            Estado = estado;
         }
     }
 }

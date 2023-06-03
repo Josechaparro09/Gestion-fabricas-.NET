@@ -16,12 +16,13 @@ namespace Entidades
         public double CostoProduccion { get; set; }
         public double PrecioVenta { get; set; }
         public double Ganancia { get; set; }
+        public bool Estado { get; set; }
 
         public Producto()
         {
         }
 
-        public Producto(int id, string nombre, Categoria categoriaProducto, Medida medidaProducto, string presentacion, double costoProduccion, double precioVenta)
+        public Producto(int id, string nombre, Categoria categoriaProducto, Medida medidaProducto, string presentacion, double costoProduccion, double precioVenta, double ganancia, bool estado)
         {
             Id = id;
             Nombre = nombre;
@@ -30,7 +31,8 @@ namespace Entidades
             Presentacion = presentacion;
             CostoProduccion = costoProduccion;
             PrecioVenta = precioVenta;
-            Ganancia = precioVenta-costoProduccion;
+            Ganancia = ganancia;
+            Estado = estado;
         }
 
         public override string ToString()
