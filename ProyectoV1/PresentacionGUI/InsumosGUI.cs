@@ -131,6 +131,12 @@ namespace PresentacionGUI
                 }
             }
         }
+        void limpiarCompra()
+        {
+            cbxInsumo.SelectedIndex = -1;
+            txtCantInsumo.Text= "";
+            txtValor.Text = "";
+        }
         void LimpiarMPrima()
         {
             txtNombreInsumo.Text = "";
@@ -192,7 +198,7 @@ namespace PresentacionGUI
                 
                 };
                 cmpRep.Insert(compra);
-                
+                limpiarCompra();
                 Menu.Show(this, "Compra agregada correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
 
             }

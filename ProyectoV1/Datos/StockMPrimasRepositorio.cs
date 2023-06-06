@@ -48,12 +48,16 @@ namespace Datos
         {
             using (var Comando = _conexion.CreateCommand())
             {
+                int filas = 0;
                 if (ExisteIdMprima(idMPrima))
                 {
                     Comando.CommandText = $"Update StockMateriasPrimas set Cantidad = cantidad + @Cantidad , FechaActualizacion = @FechaActualizacion WHERE MateriaPrimaId = @MateriaPrimaId";
                     Comando.Parameters.Add("MateriaPrimaId", SqlDbType.Int).Value = idMPrima;
                     Comando.Parameters.Add("Cantidad", SqlDbType.Decimal).Value = cantidad;
                     Comando.Parameters.Add("FechaActualizacion", SqlDbType.DateTime).Value = DateTime.Now;
+                    Open();
+                     filas = Comando.ExecuteNonQuery();
+                    Close();
                 }
                 else
                 {
@@ -70,9 +74,7 @@ namespace Datos
                 }
                 
 
-                Open();
-                var filas = Comando.ExecuteNonQuery();
-                Close();
+                
                 return filas;
             }
         }

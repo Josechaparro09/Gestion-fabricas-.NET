@@ -143,6 +143,8 @@ namespace PresentacionGUI
                             smpRep.Actualizar(smp);
                         }
                     }
+                    cbxReceta.SelectedIndex = -1;
+                    txtCantProducciones.Text = "";
 
                     Menu.Show(this, "Produccion realizada correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
 

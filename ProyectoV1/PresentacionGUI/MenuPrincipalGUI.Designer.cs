@@ -183,6 +183,7 @@
             this.gunaButton4.TabIndex = 13;
             this.gunaButton4.Text = "Ventas";
             this.gunaButton4.TextOffsetX = 10;
+            this.gunaButton4.Visible = false;
             this.gunaButton4.Click += new System.EventHandler(this.gunaButton4_Click);
             // 
             // gunaButton3
