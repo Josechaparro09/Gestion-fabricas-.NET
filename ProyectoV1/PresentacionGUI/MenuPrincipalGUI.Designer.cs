@@ -34,7 +34,6 @@
             this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.pnlMenu = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.lblNombre = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
@@ -104,7 +103,6 @@
             this.pnlMenu.BorderRadius = 3;
             this.pnlMenu.BorderThickness = 1;
             this.pnlMenu.Controls.Add(this.bunifuPictureBox1);
-            this.pnlMenu.Controls.Add(this.lblNombre);
             this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
@@ -128,22 +126,6 @@
             this.bunifuPictureBox1.TabIndex = 2;
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AllowParentOverrides = false;
-            this.lblNombre.AutoEllipsis = false;
-            this.lblNombre.CursorType = null;
-            this.lblNombre.Font = new System.Drawing.Font("Poppins Medium", 15.14F, System.Drawing.FontStyle.Bold);
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(84, 127);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombre.Size = new System.Drawing.Size(79, 32);
-            this.lblNombre.TabIndex = 3;
-            this.lblNombre.Text = "Usuario";
-            this.lblNombre.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // panel1
             // 
@@ -287,7 +269,6 @@
             this.Text = "MenuPrincipalGUI";
             this.Load += new System.EventHandler(this.MenuPrincipalGUI_Load);
             this.pnlMenu.ResumeLayout(false);
-            this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -305,6 +286,5 @@
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox3;
-        private Bunifu.UI.WinForms.BunifuLabel lblNombre;
     }
 }
