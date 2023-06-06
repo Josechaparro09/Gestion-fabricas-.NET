@@ -98,7 +98,7 @@ namespace Datos
 
         public Planta Mapper(SqlDataReader dataReader)
         {
-            var empRep = new EmpleadoRepositorio(ConfigurationManager.ConnectionStrings["ProyectoConnection"].ConnectionString);
+            var empRep = new EmpleadoRepositorio(this._conexion.ConnectionString);
             var emp = new Empleado();
             if (!dataReader.HasRows) return null;
             var planta = new Planta();

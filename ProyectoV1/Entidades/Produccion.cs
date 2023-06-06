@@ -9,29 +9,26 @@ namespace Entidades
     public class Produccion
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
         public int cantidadProducida { get; set; }
-        public Medida MedidaProduccion { get; set; }
-        public Planta PlantaEncargada { get; set; }
-        public List<ProductoProducido> ProductosProducidos { get; set; }
-        public List<MateriaPrimaUtilizada> MateriaPrimaUtilizada { get; set; }
+        public RecetaDeProduccion RProduccion { get; set; }
         public DateTime FechaProduccion { get; set; }
+
 
         public Produccion()
         {
         }
 
-        public Produccion(int id, string nombre, int cantidadProducida, Medida medidaProduccion, Planta plantaEncargada, List<ProductoProducido> productosProducidos, List<MateriaPrimaUtilizada> materiaPrimaUtilizada, DateTime fechaProduccion)
+        public Produccion(int id, int cantidadProducida, RecetaDeProduccion rProduccion, DateTime fechaProduccion)
         {
             Id = id;
-            Nombre = nombre;
             this.cantidadProducida = cantidadProducida;
-            MedidaProduccion = medidaProduccion;
-            PlantaEncargada = plantaEncargada;
-            ProductosProducidos = productosProducidos;
-            MateriaPrimaUtilizada = materiaPrimaUtilizada;
+            RProduccion = rProduccion;
             FechaProduccion = fechaProduccion;
         }
+
+
+
+
 
         //public override string ToString()
         //{

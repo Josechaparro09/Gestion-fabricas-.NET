@@ -18,39 +18,58 @@ namespace PresentacionGUI
         }
         void MostrarForm(Form f)
         {
+            
             f.MdiParent = this.MdiParent;
-            this.Hide();
             this.Close();
             f.Show();
         }
+
+        void TraerFormFront(Type tipo)
+        {
+            //OcultarTodos();
+            if (this.MdiParent is MenuPrincipalGUI formularioPrincipal)
+            {
+                var formularioSecundario = formularioPrincipal.GetForm(tipo); 
+                formularioSecundario.BringToFront();
+            }
+        }
+        void OcultarTodos()
+        {
+            foreach (var item in this.MdiChildren)
+            {
+                item.Hide();
+            }
+        }
+        
         private void btnMedidas_Click(object sender, EventArgs e)
         {
-            MostrarForm(new MedidaGUI());
+            //MostrarForm(new MedidaGUI());
+            TraerFormFront(new MedidaGUI().GetType());
         }
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-            MostrarForm(new CategoriaGUI());
+            TraerFormFront(new CategoriaGUI().GetType());
         }
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            MostrarForm(new ProveedorGUI());
+            TraerFormFront(new ProveedorGUI().GetType());
         }
 
         private void btnPlantas_Click(object sender, EventArgs e)
         {
-            MostrarForm(new PlantaGUI());
+            TraerFormFront(new PlantaGUI().GetType());
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            MostrarForm(new EmpleadoGUI());
+            TraerFormFront(new EmpleadoGUI().GetType());
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            MostrarForm(new ProductoGUI());
+            TraerFormFront(new ProductoGUI().GetType());
         }
     }
 }

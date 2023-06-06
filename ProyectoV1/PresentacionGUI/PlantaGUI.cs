@@ -24,6 +24,15 @@ namespace PresentacionGUI
         {
             InitializeComponent();
             listarPlantas();
+            tbpMain.SelectedIndex = 0;
+        }
+        void TraerFormFront(Type tipo)
+        {
+            if (this.MdiParent is MenuPrincipalGUI formularioPrincipal)
+            {
+                var formularioSecundario = formularioPrincipal.GetForm(tipo);
+                formularioSecundario.BringToFront();
+            }
         }
         void listarPlantas()
         {
@@ -186,10 +195,11 @@ namespace PresentacionGUI
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            var f = new RegistrosGUI();
-            f.MdiParent = this.MdiParent;
-            this.Close();
-            f.Show();
+            //var f = new RegistrosGUI();
+            //f.MdiParent = this.MdiParent;
+            //this.Close();
+            //f.Show();
+            TraerFormFront(new RegistrosGUI().GetType());
         }
 
         private void btnAtrasNew_Click(object sender, EventArgs e)

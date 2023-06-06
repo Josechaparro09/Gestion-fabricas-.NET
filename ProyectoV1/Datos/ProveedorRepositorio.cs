@@ -120,11 +120,13 @@ namespace Datos
             comando.Parameters.Add("id", SqlDbType.Int).Value = id;
             Open();
             SqlDataReader lector = comando.ExecuteReader();
+            
             while (lector.Read())
             {
                 proveedor = Mapper(lector);
             }
             Close();
+
             return proveedor;
         }
 

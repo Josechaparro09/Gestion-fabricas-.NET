@@ -33,12 +33,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsumosGUI));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties61 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties62 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties63 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties64 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties65 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties66 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties67 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties68 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties69 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties70 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties71 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties72 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbpMain = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.gunaAdvenceTileButton2 = new Guna.UI.WinForms.GunaAdvenceTileButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnAtrasMain = new Guna.UI.WinForms.GunaButton();
             this.gunaAdvenceTileButton9 = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.gunaAdvenceTileButton1 = new Guna.UI.WinForms.GunaAdvenceTileButton();
@@ -70,13 +83,35 @@
             this.btnIngresarInsumo = new Guna.UI.WinForms.GunaButton();
             this.dpFExpiracionInsumo = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.txtNombreInsumo = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.txtValor = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.btnComprar = new Guna.UI.WinForms.GunaButton();
+            this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.txtCantInsumo = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuLabel16 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cbxInsumo = new Guna.UI.WinForms.GunaComboBox();
+            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.tbCInsumo = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Menu = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdMPrimaCMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InsumoComprado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAtrasTb = new Guna.UI.WinForms.GunaButton();
+            this.btnAtrasNCompra = new Guna.UI.WinForms.GunaButton();
+            this.gunaAdvenceTileButton3 = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.tbpMain.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbMPrima)).BeginInit();
             this.MOInsumos.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
+            this.metroTabPage4.SuspendLayout();
+            this.metroTabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCInsumo)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpMain
@@ -84,6 +119,8 @@
             this.tbpMain.Controls.Add(this.metroTabPage1);
             this.tbpMain.Controls.Add(this.metroTabPage2);
             this.tbpMain.Controls.Add(this.metroTabPage3);
+            this.tbpMain.Controls.Add(this.metroTabPage4);
+            this.tbpMain.Controls.Add(this.metroTabPage5);
             this.tbpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbpMain.Location = new System.Drawing.Point(0, 0);
             this.tbpMain.Name = "tbpMain";
@@ -94,6 +131,8 @@
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.gunaAdvenceTileButton3);
+            this.metroTabPage1.Controls.Add(this.gunaAdvenceTileButton2);
             this.metroTabPage1.Controls.Add(this.btnAtrasMain);
             this.metroTabPage1.Controls.Add(this.gunaAdvenceTileButton9);
             this.metroTabPage1.Controls.Add(this.gunaAdvenceTileButton1);
@@ -109,6 +148,50 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             this.metroTabPage1.Enter += new System.EventHandler(this.metroTabPage1_Enter);
+            // 
+            // gunaAdvenceTileButton2
+            // 
+            this.gunaAdvenceTileButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaAdvenceTileButton2.Animated = true;
+            this.gunaAdvenceTileButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceTileButton2.AnimationSpeed = 0.03F;
+            this.gunaAdvenceTileButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaAdvenceTileButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaAdvenceTileButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceTileButton2.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceTileButton2.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceTileButton2.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceTileButton2.CheckedImage = global::PresentacionGUI.Properties.Resources.Ver_insumos;
+            this.gunaAdvenceTileButton2.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceTileButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaAdvenceTileButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaAdvenceTileButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaAdvenceTileButton2.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceTileButton2.ForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceTileButton2.Image = global::PresentacionGUI.Properties.Resources.Ver_insumos;
+            this.gunaAdvenceTileButton2.ImageSize = new System.Drawing.Size(72, 72);
+            this.gunaAdvenceTileButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceTileButton2.Location = new System.Drawing.Point(171, 359);
+            this.gunaAdvenceTileButton2.Name = "gunaAdvenceTileButton2";
+            this.gunaAdvenceTileButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
+            this.gunaAdvenceTileButton2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceTileButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceTileButton2.OnHoverImage = null;
+            this.gunaAdvenceTileButton2.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceTileButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceTileButton2.Radius = 30;
+            this.gunaAdvenceTileButton2.Size = new System.Drawing.Size(210, 210);
+            this.gunaAdvenceTileButton2.TabIndex = 32;
+            this.gunaAdvenceTileButton2.Text = "Comprar insumos";
+            this.gunaAdvenceTileButton2.Click += new System.EventHandler(this.gunaAdvenceTileButton2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(823, 47);
+            this.panel1.TabIndex = 3;
             // 
             // btnAtrasMain
             // 
@@ -160,7 +243,7 @@
             this.gunaAdvenceTileButton9.Image = global::PresentacionGUI.Properties.Resources.Ver_insumos;
             this.gunaAdvenceTileButton9.ImageSize = new System.Drawing.Size(72, 72);
             this.gunaAdvenceTileButton9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceTileButton9.Location = new System.Drawing.Point(444, 224);
+            this.gunaAdvenceTileButton9.Location = new System.Drawing.Point(455, 95);
             this.gunaAdvenceTileButton9.Name = "gunaAdvenceTileButton9";
             this.gunaAdvenceTileButton9.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
             this.gunaAdvenceTileButton9.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -196,7 +279,7 @@
             this.gunaAdvenceTileButton1.Image = global::PresentacionGUI.Properties.Resources.Insumos;
             this.gunaAdvenceTileButton1.ImageSize = new System.Drawing.Size(72, 72);
             this.gunaAdvenceTileButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceTileButton1.Location = new System.Drawing.Point(160, 224);
+            this.gunaAdvenceTileButton1.Location = new System.Drawing.Point(171, 95);
             this.gunaAdvenceTileButton1.Name = "gunaAdvenceTileButton1";
             this.gunaAdvenceTileButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
             this.gunaAdvenceTileButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -707,26 +790,26 @@
             this.txtNombreInsumo.Modified = false;
             this.txtNombreInsumo.Multiline = false;
             this.txtNombreInsumo.Name = "txtNombreInsumo";
-            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNombreInsumo.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtNombreInsumo.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNombreInsumo.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNombreInsumo.OnIdleState = stateProperties20;
+            stateProperties61.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            stateProperties61.FillColor = System.Drawing.Color.Empty;
+            stateProperties61.ForeColor = System.Drawing.Color.Empty;
+            stateProperties61.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNombreInsumo.OnActiveState = stateProperties61;
+            stateProperties62.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties62.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties62.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtNombreInsumo.OnDisabledState = stateProperties62;
+            stateProperties63.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties63.FillColor = System.Drawing.Color.Empty;
+            stateProperties63.ForeColor = System.Drawing.Color.Empty;
+            stateProperties63.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNombreInsumo.OnHoverState = stateProperties63;
+            stateProperties64.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties64.FillColor = System.Drawing.Color.White;
+            stateProperties64.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            stateProperties64.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNombreInsumo.OnIdleState = stateProperties64;
             this.txtNombreInsumo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombreInsumo.PasswordChar = '\0';
             this.txtNombreInsumo.PlaceholderForeColor = System.Drawing.Color.DarkGray;
@@ -747,6 +830,369 @@
             this.txtNombreInsumo.TextPlaceholder = "Nombre";
             this.txtNombreInsumo.UseSystemPasswordChar = false;
             this.txtNombreInsumo.WordWrap = true;
+            // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.Controls.Add(this.btnAtrasNCompra);
+            this.metroTabPage4.Controls.Add(this.txtValor);
+            this.metroTabPage4.Controls.Add(this.btnComprar);
+            this.metroTabPage4.Controls.Add(this.bunifuLabel14);
+            this.metroTabPage4.Controls.Add(this.txtCantInsumo);
+            this.metroTabPage4.Controls.Add(this.bunifuLabel16);
+            this.metroTabPage4.Controls.Add(this.cbxInsumo);
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.HorizontalScrollbarSize = 10;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(815, 658);
+            this.metroTabPage4.TabIndex = 3;
+            this.metroTabPage4.Text = "metroTabPage4";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.VerticalScrollbarSize = 10;
+            this.metroTabPage4.Enter += new System.EventHandler(this.metroTabPage4_Enter);
+            // 
+            // txtValor
+            // 
+            this.txtValor.AcceptsReturn = false;
+            this.txtValor.AcceptsTab = false;
+            this.txtValor.AnimationSpeed = 200;
+            this.txtValor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtValor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtValor.BackColor = System.Drawing.Color.White;
+            this.txtValor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtValor.BackgroundImage")));
+            this.txtValor.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtValor.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtValor.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtValor.BorderColorIdle = System.Drawing.Color.DarkGray;
+            this.txtValor.BorderRadius = 5;
+            this.txtValor.BorderThickness = 2;
+            this.txtValor.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtValor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtValor.DefaultFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValor.DefaultText = "";
+            this.txtValor.FillColor = System.Drawing.Color.White;
+            this.txtValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtValor.HideSelection = true;
+            this.txtValor.IconLeft = null;
+            this.txtValor.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtValor.IconPadding = 10;
+            this.txtValor.IconRight = null;
+            this.txtValor.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtValor.Lines = new string[0];
+            this.txtValor.Location = new System.Drawing.Point(277, 439);
+            this.txtValor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtValor.MaxLength = 32767;
+            this.txtValor.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtValor.Modified = false;
+            this.txtValor.Multiline = false;
+            this.txtValor.Name = "txtValor";
+            stateProperties65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            stateProperties65.FillColor = System.Drawing.Color.Empty;
+            stateProperties65.ForeColor = System.Drawing.Color.Empty;
+            stateProperties65.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtValor.OnActiveState = stateProperties65;
+            stateProperties66.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties66.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties66.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtValor.OnDisabledState = stateProperties66;
+            stateProperties67.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties67.FillColor = System.Drawing.Color.Empty;
+            stateProperties67.ForeColor = System.Drawing.Color.Empty;
+            stateProperties67.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtValor.OnHoverState = stateProperties67;
+            stateProperties68.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties68.FillColor = System.Drawing.Color.White;
+            stateProperties68.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            stateProperties68.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtValor.OnIdleState = stateProperties68;
+            this.txtValor.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtValor.PasswordChar = '\0';
+            this.txtValor.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtValor.PlaceholderText = "Valor";
+            this.txtValor.ReadOnly = false;
+            this.txtValor.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtValor.SelectedText = "";
+            this.txtValor.SelectionLength = 0;
+            this.txtValor.SelectionStart = 0;
+            this.txtValor.ShortcutsEnabled = true;
+            this.txtValor.Size = new System.Drawing.Size(260, 51);
+            this.txtValor.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
+            this.txtValor.TabIndex = 67;
+            this.txtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtValor.TextMarginBottom = 0;
+            this.txtValor.TextMarginLeft = 3;
+            this.txtValor.TextMarginTop = 0;
+            this.txtValor.TextPlaceholder = "Valor";
+            this.txtValor.UseSystemPasswordChar = false;
+            this.txtValor.WordWrap = true;
+            // 
+            // btnComprar
+            // 
+            this.btnComprar.Animated = true;
+            this.btnComprar.AnimationHoverSpeed = 0.07F;
+            this.btnComprar.AnimationSpeed = 0.03F;
+            this.btnComprar.BackColor = System.Drawing.Color.Transparent;
+            this.btnComprar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnComprar.BorderColor = System.Drawing.Color.Black;
+            this.btnComprar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnComprar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnComprar.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComprar.ForeColor = System.Drawing.Color.White;
+            this.btnComprar.Image = null;
+            this.btnComprar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnComprar.Location = new System.Drawing.Point(332, 534);
+            this.btnComprar.Name = "btnComprar";
+            this.btnComprar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnComprar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnComprar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnComprar.OnHoverImage = null;
+            this.btnComprar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnComprar.Radius = 20;
+            this.btnComprar.Size = new System.Drawing.Size(151, 42);
+            this.btnComprar.TabIndex = 66;
+            this.btnComprar.Text = "Comprar";
+            this.btnComprar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
+            // 
+            // bunifuLabel14
+            // 
+            this.bunifuLabel14.AllowParentOverrides = false;
+            this.bunifuLabel14.AutoEllipsis = false;
+            this.bunifuLabel14.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel14.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel14.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.bunifuLabel14.Location = new System.Drawing.Point(316, 150);
+            this.bunifuLabel14.Name = "bunifuLabel14";
+            this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel14.Size = new System.Drawing.Size(182, 42);
+            this.bunifuLabel14.TabIndex = 65;
+            this.bunifuLabel14.Text = "Nueva compra";
+            this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel14.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // txtCantInsumo
+            // 
+            this.txtCantInsumo.AcceptsReturn = false;
+            this.txtCantInsumo.AcceptsTab = false;
+            this.txtCantInsumo.AnimationSpeed = 200;
+            this.txtCantInsumo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtCantInsumo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtCantInsumo.BackColor = System.Drawing.Color.White;
+            this.txtCantInsumo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtCantInsumo.BackgroundImage")));
+            this.txtCantInsumo.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtCantInsumo.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtCantInsumo.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtCantInsumo.BorderColorIdle = System.Drawing.Color.DarkGray;
+            this.txtCantInsumo.BorderRadius = 5;
+            this.txtCantInsumo.BorderThickness = 2;
+            this.txtCantInsumo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtCantInsumo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCantInsumo.DefaultFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantInsumo.DefaultText = "";
+            this.txtCantInsumo.FillColor = System.Drawing.Color.White;
+            this.txtCantInsumo.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCantInsumo.HideSelection = true;
+            this.txtCantInsumo.IconLeft = null;
+            this.txtCantInsumo.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCantInsumo.IconPadding = 10;
+            this.txtCantInsumo.IconRight = null;
+            this.txtCantInsumo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCantInsumo.Lines = new string[0];
+            this.txtCantInsumo.Location = new System.Drawing.Point(277, 344);
+            this.txtCantInsumo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCantInsumo.MaxLength = 32767;
+            this.txtCantInsumo.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtCantInsumo.Modified = false;
+            this.txtCantInsumo.Multiline = false;
+            this.txtCantInsumo.Name = "txtCantInsumo";
+            stateProperties69.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            stateProperties69.FillColor = System.Drawing.Color.Empty;
+            stateProperties69.ForeColor = System.Drawing.Color.Empty;
+            stateProperties69.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtCantInsumo.OnActiveState = stateProperties69;
+            stateProperties70.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties70.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties70.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtCantInsumo.OnDisabledState = stateProperties70;
+            stateProperties71.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties71.FillColor = System.Drawing.Color.Empty;
+            stateProperties71.ForeColor = System.Drawing.Color.Empty;
+            stateProperties71.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtCantInsumo.OnHoverState = stateProperties71;
+            stateProperties72.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties72.FillColor = System.Drawing.Color.White;
+            stateProperties72.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            stateProperties72.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtCantInsumo.OnIdleState = stateProperties72;
+            this.txtCantInsumo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCantInsumo.PasswordChar = '\0';
+            this.txtCantInsumo.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtCantInsumo.PlaceholderText = "Cantidad a comprar";
+            this.txtCantInsumo.ReadOnly = false;
+            this.txtCantInsumo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCantInsumo.SelectedText = "";
+            this.txtCantInsumo.SelectionLength = 0;
+            this.txtCantInsumo.SelectionStart = 0;
+            this.txtCantInsumo.ShortcutsEnabled = true;
+            this.txtCantInsumo.Size = new System.Drawing.Size(260, 51);
+            this.txtCantInsumo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
+            this.txtCantInsumo.TabIndex = 64;
+            this.txtCantInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCantInsumo.TextMarginBottom = 0;
+            this.txtCantInsumo.TextMarginLeft = 3;
+            this.txtCantInsumo.TextMarginTop = 0;
+            this.txtCantInsumo.TextPlaceholder = "Cantidad a comprar";
+            this.txtCantInsumo.UseSystemPasswordChar = false;
+            this.txtCantInsumo.WordWrap = true;
+            // 
+            // bunifuLabel16
+            // 
+            this.bunifuLabel16.AllowParentOverrides = false;
+            this.bunifuLabel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuLabel16.AutoEllipsis = false;
+            this.bunifuLabel16.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel16.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel16.Font = new System.Drawing.Font("Poppins", 11F);
+            this.bunifuLabel16.ForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuLabel16.Location = new System.Drawing.Point(379, 228);
+            this.bunifuLabel16.Name = "bunifuLabel16";
+            this.bunifuLabel16.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel16.Size = new System.Drawing.Size(57, 26);
+            this.bunifuLabel16.TabIndex = 63;
+            this.bunifuLabel16.Text = "Insumo";
+            this.bunifuLabel16.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel16.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // cbxInsumo
+            // 
+            this.cbxInsumo.BackColor = System.Drawing.Color.Transparent;
+            this.cbxInsumo.BaseColor = System.Drawing.Color.White;
+            this.cbxInsumo.BorderColor = System.Drawing.Color.Silver;
+            this.cbxInsumo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxInsumo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxInsumo.FocusedColor = System.Drawing.Color.Empty;
+            this.cbxInsumo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbxInsumo.ForeColor = System.Drawing.Color.Black;
+            this.cbxInsumo.FormattingEnabled = true;
+            this.cbxInsumo.Location = new System.Drawing.Point(277, 274);
+            this.cbxInsumo.Name = "cbxInsumo";
+            this.cbxInsumo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cbxInsumo.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbxInsumo.Radius = 5;
+            this.cbxInsumo.Size = new System.Drawing.Size(260, 26);
+            this.cbxInsumo.TabIndex = 62;
+            // 
+            // metroTabPage5
+            // 
+            this.metroTabPage5.Controls.Add(this.btnAtrasTb);
+            this.metroTabPage5.Controls.Add(this.bunifuLabel1);
+            this.metroTabPage5.Controls.Add(this.tbCInsumo);
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.HorizontalScrollbarSize = 10;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(815, 658);
+            this.metroTabPage5.TabIndex = 4;
+            this.metroTabPage5.Text = "metroTabPage5";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.VerticalScrollbarSize = 10;
+            this.metroTabPage5.Enter += new System.EventHandler(this.metroTabPage5_Enter);
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(278, 57);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(259, 42);
+            this.bunifuLabel1.TabIndex = 66;
+            this.bunifuLabel1.Text = "Compras de insumos";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // tbCInsumo
+            // 
+            this.tbCInsumo.AllowCustomTheming = true;
+            this.tbCInsumo.AllowUserToAddRows = false;
+            this.tbCInsumo.AllowUserToDeleteRows = false;
+            this.tbCInsumo.AllowUserToResizeColumns = false;
+            this.tbCInsumo.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.tbCInsumo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tbCInsumo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tbCInsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCInsumo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tbCInsumo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tbCInsumo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.tbCInsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbCInsumo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.IdMPrimaCMP,
+            this.InsumoComprado,
+            this.Cant,
+            this.Valor,
+            this.FechaCompra});
+            this.tbCInsumo.ContextMenuStrip = this.MOInsumos;
+            this.tbCInsumo.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.tbCInsumo.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tbCInsumo.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tbCInsumo.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tbCInsumo.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tbCInsumo.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.tbCInsumo.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tbCInsumo.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tbCInsumo.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.tbCInsumo.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tbCInsumo.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.tbCInsumo.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.tbCInsumo.CurrentTheme.Name = null;
+            this.tbCInsumo.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tbCInsumo.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tbCInsumo.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tbCInsumo.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tbCInsumo.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tbCInsumo.DefaultCellStyle = dataGridViewCellStyle6;
+            this.tbCInsumo.EnableHeadersVisualStyles = false;
+            this.tbCInsumo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tbCInsumo.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tbCInsumo.HeaderBgColor = System.Drawing.Color.Empty;
+            this.tbCInsumo.HeaderForeColor = System.Drawing.Color.White;
+            this.tbCInsumo.Location = new System.Drawing.Point(15, 131);
+            this.tbCInsumo.Name = "tbCInsumo";
+            this.tbCInsumo.ReadOnly = true;
+            this.tbCInsumo.RowHeadersVisible = false;
+            this.tbCInsumo.RowTemplate.Height = 40;
+            this.tbCInsumo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tbCInsumo.Size = new System.Drawing.Size(784, 474);
+            this.tbCInsumo.TabIndex = 41;
+            this.tbCInsumo.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // Menu
             // 
@@ -817,11 +1263,142 @@
             this.Menu.WarningOptions.IconLeftMargin = 12;
             this.Menu.ZoomCloseIcon = true;
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // IdMPrimaCMP
+            // 
+            this.IdMPrimaCMP.HeaderText = "IdMprima";
+            this.IdMPrimaCMP.Name = "IdMPrimaCMP";
+            this.IdMPrimaCMP.ReadOnly = true;
+            this.IdMPrimaCMP.Visible = false;
+            // 
+            // InsumoComprado
+            // 
+            this.InsumoComprado.HeaderText = "Insumo comprado";
+            this.InsumoComprado.Name = "InsumoComprado";
+            this.InsumoComprado.ReadOnly = true;
+            // 
+            // Cant
+            // 
+            this.Cant.HeaderText = "Cantidad";
+            this.Cant.Name = "Cant";
+            this.Cant.ReadOnly = true;
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
+            // 
+            // FechaCompra
+            // 
+            this.FechaCompra.HeaderText = "Fecha de compra";
+            this.FechaCompra.Name = "FechaCompra";
+            this.FechaCompra.ReadOnly = true;
+            // 
+            // btnAtrasTb
+            // 
+            this.btnAtrasTb.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAtrasTb.Animated = true;
+            this.btnAtrasTb.AnimationHoverSpeed = 0.07F;
+            this.btnAtrasTb.AnimationSpeed = 0.03F;
+            this.btnAtrasTb.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtrasTb.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnAtrasTb.BorderColor = System.Drawing.Color.Black;
+            this.btnAtrasTb.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAtrasTb.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAtrasTb.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtrasTb.ForeColor = System.Drawing.Color.White;
+            this.btnAtrasTb.Image = global::PresentacionGUI.Properties.Resources.Atras;
+            this.btnAtrasTb.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnAtrasTb.Location = new System.Drawing.Point(748, 14);
+            this.btnAtrasTb.Name = "btnAtrasTb";
+            this.btnAtrasTb.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
+            this.btnAtrasTb.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAtrasTb.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAtrasTb.OnHoverImage = null;
+            this.btnAtrasTb.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAtrasTb.Radius = 20;
+            this.btnAtrasTb.Size = new System.Drawing.Size(51, 41);
+            this.btnAtrasTb.TabIndex = 67;
+            this.btnAtrasTb.TextOffsetX = 10;
+            this.btnAtrasTb.Click += new System.EventHandler(this.btnAtrasTb_Click);
+            // 
+            // btnAtrasNCompra
+            // 
+            this.btnAtrasNCompra.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAtrasNCompra.Animated = true;
+            this.btnAtrasNCompra.AnimationHoverSpeed = 0.07F;
+            this.btnAtrasNCompra.AnimationSpeed = 0.03F;
+            this.btnAtrasNCompra.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtrasNCompra.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnAtrasNCompra.BorderColor = System.Drawing.Color.Black;
+            this.btnAtrasNCompra.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAtrasNCompra.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAtrasNCompra.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtrasNCompra.ForeColor = System.Drawing.Color.White;
+            this.btnAtrasNCompra.Image = global::PresentacionGUI.Properties.Resources.Atras;
+            this.btnAtrasNCompra.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnAtrasNCompra.Location = new System.Drawing.Point(745, 12);
+            this.btnAtrasNCompra.Name = "btnAtrasNCompra";
+            this.btnAtrasNCompra.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
+            this.btnAtrasNCompra.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAtrasNCompra.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAtrasNCompra.OnHoverImage = null;
+            this.btnAtrasNCompra.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAtrasNCompra.Radius = 20;
+            this.btnAtrasNCompra.Size = new System.Drawing.Size(51, 41);
+            this.btnAtrasNCompra.TabIndex = 68;
+            this.btnAtrasNCompra.TextOffsetX = 10;
+            this.btnAtrasNCompra.Click += new System.EventHandler(this.btnAtrasNCompra_Click);
+            // 
+            // gunaAdvenceTileButton3
+            // 
+            this.gunaAdvenceTileButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaAdvenceTileButton3.Animated = true;
+            this.gunaAdvenceTileButton3.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceTileButton3.AnimationSpeed = 0.03F;
+            this.gunaAdvenceTileButton3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaAdvenceTileButton3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaAdvenceTileButton3.BorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceTileButton3.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceTileButton3.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceTileButton3.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceTileButton3.CheckedImage = global::PresentacionGUI.Properties.Resources.Ver_insumos;
+            this.gunaAdvenceTileButton3.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceTileButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaAdvenceTileButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaAdvenceTileButton3.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaAdvenceTileButton3.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceTileButton3.ForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceTileButton3.Image = global::PresentacionGUI.Properties.Resources.Insumos;
+            this.gunaAdvenceTileButton3.ImageSize = new System.Drawing.Size(72, 72);
+            this.gunaAdvenceTileButton3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceTileButton3.Location = new System.Drawing.Point(455, 359);
+            this.gunaAdvenceTileButton3.Name = "gunaAdvenceTileButton3";
+            this.gunaAdvenceTileButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(45)))), ((int)(((byte)(179)))));
+            this.gunaAdvenceTileButton3.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceTileButton3.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceTileButton3.OnHoverImage = null;
+            this.gunaAdvenceTileButton3.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceTileButton3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceTileButton3.Radius = 30;
+            this.gunaAdvenceTileButton3.Size = new System.Drawing.Size(210, 210);
+            this.gunaAdvenceTileButton3.TabIndex = 33;
+            this.gunaAdvenceTileButton3.Text = "Ver compras";
+            this.gunaAdvenceTileButton3.Click += new System.EventHandler(this.gunaAdvenceTileButton3_Click);
+            // 
             // InsumosGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 700);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tbpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InsumosGUI";
@@ -835,6 +1412,11 @@
             this.MOInsumos.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
             this.metroTabPage3.PerformLayout();
+            this.metroTabPage4.ResumeLayout(false);
+            this.metroTabPage4.PerformLayout();
+            this.metroTabPage5.ResumeLayout(false);
+            this.metroTabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCInsumo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -875,5 +1457,26 @@
         private Guna.UI.WinForms.GunaButton btnAtrasMain;
         private Guna.UI.WinForms.GunaButton btnAtras;
         private Guna.UI.WinForms.GunaButton btnAtrasNew;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI.WinForms.GunaAdvenceTileButton gunaAdvenceTileButton2;
+        private MetroFramework.Controls.MetroTabPage metroTabPage4;
+        private Bunifu.UI.WinForms.BunifuTextBox txtValor;
+        private Guna.UI.WinForms.GunaButton btnComprar;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
+        private Bunifu.UI.WinForms.BunifuTextBox txtCantInsumo;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel16;
+        private Guna.UI.WinForms.GunaComboBox cbxInsumo;
+        private MetroFramework.Controls.MetroTabPage metroTabPage5;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuDataGridView tbCInsumo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdMPrimaCMP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InsumoComprado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCompra;
+        private Guna.UI.WinForms.GunaButton btnAtrasNCompra;
+        private Guna.UI.WinForms.GunaButton btnAtrasTb;
+        private Guna.UI.WinForms.GunaAdvenceTileButton gunaAdvenceTileButton3;
     }
 }

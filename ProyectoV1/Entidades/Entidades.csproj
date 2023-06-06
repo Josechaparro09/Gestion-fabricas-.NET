@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria.cs" />
+    <Compile Include="CompraMprima.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="EmpleadoDTO.cs" />
     <Compile Include="Fabrica.cs" />
@@ -56,6 +57,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedores.cs" />
     <Compile Include="RecetaDeProduccion.cs" />
+    <Compile Include="StockMPrima.cs" />
+    <Compile Include="StockProductos.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Venta.cs" />
   </ItemGroup>

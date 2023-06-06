@@ -11,18 +11,19 @@ namespace Entidades
         public int Id { get; set; }
         public MateriaPrima MPrimaUtilizada { get; set; }
         public double CantUtilizada { get; set; }
-        public Produccion Produccion { get; set; }
+        public int IdReceta { get; set; }
+
         public MateriaPrimaUtilizada()
         {
             
         }
 
-        public MateriaPrimaUtilizada(int id, MateriaPrima mPrimaUtilizada, double cantUtilizada, Produccion produccion)
+        public MateriaPrimaUtilizada(int id, MateriaPrima mPrimaUtilizada, double cantUtilizada, int idReceta)
         {
             Id = id;
             MPrimaUtilizada = mPrimaUtilizada;
             CantUtilizada = cantUtilizada;
-            Produccion = produccion;
+            IdReceta = idReceta;
         }
     }
 }

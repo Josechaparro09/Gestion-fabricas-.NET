@@ -110,8 +110,8 @@ namespace Datos
 
         public Producto Mapper(SqlDataReader dataReader)
         {
-            var catRep = new CategoriaRepositorio(ConfigurationManager.ConnectionStrings["ProyectoConnection"].ConnectionString);
-            var medRep = new MedidasRepositorio(ConfigurationManager.ConnectionStrings["ProyectoConnection"].ConnectionString);
+            var catRep = new CategoriaRepositorio(this._conexion.ConnectionString);
+            var medRep = new MedidasRepositorio(this._conexion.ConnectionString);
             var prod = new Producto();
             if (!dataReader.HasRows) return null;
             
@@ -133,16 +133,27 @@ namespace Datos
         {
             var producto = new Producto();
 
-            var comando = _conexion.CreateCommand();
-            comando.CommandText = "SELECT * FROM Productos WHERE id = @id ";
-            comando.Parameters.Add("id", SqlDbType.Int).Value = id;
-            Open();
-            SqlDataReader lector = comando.ExecuteReader();
-            while (lector.Read())
+            try
             {
-                producto = Mapper(lector);
+                var comando = _conexion.CreateCommand();
+                comando.CommandText = "SELECT * FROM Productos WHERE id = @id ";
+                comando.Parameters.Add("id", SqlDbType.Int).Value = id;
+                Open();
+                SqlDataReader lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    producto = Mapper(lector);
+                }
+                return producto;
             }
-            Close();
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Close();
+            }
             return producto;
         }
         public Producto ObtenerPorIndex(int index)

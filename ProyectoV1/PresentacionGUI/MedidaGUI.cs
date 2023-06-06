@@ -15,13 +15,16 @@ namespace PresentacionGUI
     public partial class MedidaGUI : Form
     {
         MedidaRepository medidaRep = new MedidaRepository(ConfigConnection.connectionString);
+        
         bool editar;
         int IdSeleccionado;
         public MedidaGUI()
         {
             InitializeComponent();
             listarMedidas();
+            tbpMedida.SelectedIndex = 0;
         }
+
         void listarMedidas()
         {
             tbMedidas.Rows.Clear();
@@ -31,6 +34,15 @@ namespace PresentacionGUI
                 tbMedidas.Rows.Add(medida.Id, medida.NombreCorto, medida.NombreLargo);
             }
 
+        }
+        void TraerFormFront(Type tipo)
+        {
+            //OcultarTodos();
+            if (this.MdiParent is MenuPrincipalGUI formularioPrincipal)
+            {
+                var formularioSecundario = formularioPrincipal.GetForm(tipo);
+                formularioSecundario.BringToFront();
+            }
         }
         void GuardarMedida()
         {
@@ -194,11 +206,17 @@ namespace PresentacionGUI
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            var f = new RegistrosGUI();
-            f.MdiParent = this.MdiParent;
-            this.Hide();
-            this.Close();
-            f.Show();
+            //var f = new RegistrosGUI();
+            //f.MdiParent = this.MdiParent;
+            TraerFormFront(new RegistrosGUI().GetType());
+            //this.Hide();
+            //this.Close();
+            //f.Show();
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            tbpMedida.SelectedIndex = 0;
         }
     }
 

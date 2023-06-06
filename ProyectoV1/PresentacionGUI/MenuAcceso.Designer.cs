@@ -94,6 +94,7 @@
             this.btnRegistrarse.Animated = true;
             this.btnRegistrarse.AnimationHoverSpeed = 0.07F;
             this.btnRegistrarse.AnimationSpeed = 0.03F;
+            this.btnRegistrarse.BackColor = System.Drawing.Color.Transparent;
             this.btnRegistrarse.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.btnRegistrarse.BorderColor = System.Drawing.Color.Black;
             this.btnRegistrarse.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -109,6 +110,7 @@
             this.btnRegistrarse.OnHoverForeColor = System.Drawing.Color.White;
             this.btnRegistrarse.OnHoverImage = null;
             this.btnRegistrarse.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRegistrarse.Radius = 20;
             this.btnRegistrarse.Size = new System.Drawing.Size(290, 42);
             this.btnRegistrarse.TabIndex = 23;
             this.btnRegistrarse.Text = "Registrarse";
@@ -138,6 +140,7 @@
             this.btnIniciarSesion.Animated = true;
             this.btnIniciarSesion.AnimationHoverSpeed = 0.07F;
             this.btnIniciarSesion.AnimationSpeed = 0.03F;
+            this.btnIniciarSesion.BackColor = System.Drawing.Color.Transparent;
             this.btnIniciarSesion.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.btnIniciarSesion.BorderColor = System.Drawing.Color.Black;
             this.btnIniciarSesion.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -153,6 +156,7 @@
             this.btnIniciarSesion.OnHoverForeColor = System.Drawing.Color.White;
             this.btnIniciarSesion.OnHoverImage = null;
             this.btnIniciarSesion.OnPressedColor = System.Drawing.Color.Black;
+            this.btnIniciarSesion.Radius = 20;
             this.btnIniciarSesion.Size = new System.Drawing.Size(290, 42);
             this.btnIniciarSesion.TabIndex = 25;
             this.btnIniciarSesion.Text = "Iniciar sesion";
@@ -201,6 +205,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "MenuAcceso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuAcceso";
             this.ResumeLayout(false);
             this.PerformLayout();

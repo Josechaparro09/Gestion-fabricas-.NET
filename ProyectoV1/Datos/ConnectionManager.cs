@@ -18,27 +18,12 @@ namespace Datos
         }
         public void Open()
         {
-            try
-            {
-                _conexion.Open();
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.ToString());
-                throw;
-            }
+            
+            _conexion.Open();
         }
         public void Close()
         {
-            try
-            {
-                _conexion.Close();
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.ToString());
-                throw;
-            }
+            _conexion.Close();
         }
     }
 }

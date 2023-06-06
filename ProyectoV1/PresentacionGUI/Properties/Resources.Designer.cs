@@ -263,6 +263,16 @@ namespace PresentacionGUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ver {
+            get {
+                object obj = ResourceManager.GetObject("Ver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ver_insumos {
             get {
                 object obj = ResourceManager.GetObject("Ver insumos", resourceCulture);

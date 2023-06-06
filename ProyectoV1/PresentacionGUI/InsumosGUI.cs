@@ -18,11 +18,14 @@ namespace PresentacionGUI
         MPrimaRepository mprimaRep = new MPrimaRepository(ConfigConnection.connectionString);
         ProveedorRepository provRep = new ProveedorRepository(ConfigConnection.connectionString);
         MedidaRepository medidaRep = new MedidaRepository(ConfigConnection.connectionString);
+        StockMPrimaRepository smpRep = new StockMPrimaRepository(ConfigConnection.connectionString);
+        CompraMPrimaRepository cmpRep = new CompraMPrimaRepository(ConfigConnection.connectionString);
         int IdSeleccionado;
         bool editar;
         public InsumosGUI()
         {
             InitializeComponent();
+            tbpMain.SelectedIndex = 0;
         }
         void listarProvCbx(GunaComboBox cbx)
         {
@@ -33,7 +36,15 @@ namespace PresentacionGUI
                 cbx.Items.Add(prov.Nombre);
             }
         }
-
+        void TraerFormFront(Type tipo)
+        {
+            //OcultarTodos();
+            if (this.MdiParent is MenuPrincipalGUI formularioPrincipal)
+            {
+                var formularioSecundario = formularioPrincipal.GetForm(tipo);
+                formularioSecundario.BringToFront();
+            }
+        }
         void listarMedCbx(GunaComboBox cbx)
         {
             cbx.Items.Clear();
@@ -50,6 +61,15 @@ namespace PresentacionGUI
             foreach (var mprima in lista)
             {
                 tbMPrima.Rows.Add(mprima.Id, mprima.Nombre, mprima.FechaCompra, mprima.FechaExpiracion, mprima.Medida.Id, mprima.Medida.NombreCorto, mprima.Proveedor.Id, mprima.Proveedor.Nombre);
+            }
+        }
+        void listarInsumos()
+        {
+            tbCInsumo.Rows.Clear();
+            var lista = cmpRep.GetAll();
+            foreach (var compra in lista)
+            {
+                tbCInsumo.Rows.Add(compra.Id,compra.MPrima.Id,compra.MPrima.Nombre,compra.Cantidad,compra.Valor,compra.FCompra);
             }
         }
         void editarMPrima()
@@ -125,6 +145,56 @@ namespace PresentacionGUI
             {
                 mprimaRep.Eliminar(IdSeleccionado);
                 listarMPrima();
+            }
+        }
+        void listarInsumoCbx(GunaComboBox cbx)
+        {
+            cbx.Items.Clear();
+            var lista = mprimaRep.GetAll();
+            foreach (var mp in lista)
+            {
+                cbx.Items.Add(mp.Nombre);
+            }
+        }
+        bool validarNumero(string cadena)
+        {
+            return double.TryParse(cadena, out double numero);
+        }
+
+        void ComprarInsumo()
+        {
+            if (cbxInsumo.SelectedIndex ==-1)
+            {
+                Menu.Show(this, "No se ha seleccionado ningun insumo", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+
+            }
+            else if (txtCantInsumo.Text == "")
+            {
+                Menu.Show(this, "El campo cantidad esta vacio", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+
+            }
+            else if (!validarNumero(txtCantInsumo.Text))
+            {
+                Menu.Show(this, "Verifique que la cantidad sea numerica", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+
+            }
+            else
+            {
+                
+                var cant = double.Parse(txtCantInsumo.Text);
+                var idmp = mprimaRep.ObtenerPorIndex(cbxInsumo.SelectedIndex);
+                smpRep.ComprarMPrima(cant,idmp.Id);
+                var compra = new CompraMprima()
+                {
+                    Cantidad = cant,
+                    Valor = double.Parse(txtValor.Text),
+                    MPrima = idmp
+                
+                };
+                cmpRep.Insert(compra);
+                
+                Menu.Show(this, "Compra agregada correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+
             }
         }
         void pasarMPrimatxt()
@@ -250,10 +320,43 @@ namespace PresentacionGUI
 
         private void btnAtrasMain_Click(object sender, EventArgs e)
         {
-            var f = new RegistrosGUI();
-            f.MdiParent = this.MdiParent;
-            this.Close();
-            f.Show();
+
+            TraerFormFront(new RegistrosGUI().GetType());
+        }
+
+        private void gunaAdvenceTileButton2_Click(object sender, EventArgs e)
+        {
+            tbpMain.SelectedIndex = 3;
+        }
+
+        private void metroTabPage4_Enter(object sender, EventArgs e)
+        {
+            listarInsumoCbx(cbxInsumo);
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            ComprarInsumo();
+        }
+
+        private void metroTabPage5_Enter(object sender, EventArgs e)
+        {
+            listarInsumos();
+        }
+
+        private void btnAtrasNCompra_Click(object sender, EventArgs e)
+        {
+            tbpMain.SelectedIndex = 0;
+        }
+
+        private void btnAtrasTb_Click(object sender, EventArgs e)
+        {
+            tbpMain.SelectedIndex = 0;
+        }
+
+        private void gunaAdvenceTileButton3_Click(object sender, EventArgs e)
+        {
+            tbpMain.SelectedIndex = 4;
         }
     }
 }

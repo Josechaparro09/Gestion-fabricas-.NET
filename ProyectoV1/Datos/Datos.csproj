@@ -47,15 +47,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaRepositorio.cs" />
+    <Compile Include="CompraMPrimaRepositorio.cs" />
     <Compile Include="ConnectionManager.cs" />
     <Compile Include="EmpleadoRepositorio.cs" />
     <Compile Include="ICRUD.cs" />
     <Compile Include="MedidasRepositorio.cs" />
     <Compile Include="MPrimaRepositorio.cs" />
+    <Compile Include="MPrimaUtilizadaRepositorio.cs" />
     <Compile Include="PlantaRepositorio.cs" />
+    <Compile Include="PProducidoRepositorio.cs" />
+    <Compile Include="ProduccionRepositorio.cs" />
     <Compile Include="ProductoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorRepositorio.cs" />
+    <Compile Include="RProduccionRepositorio.cs" />
+    <Compile Include="StockMPrimasRepositorio.cs" />
+    <Compile Include="StockProductosRepositorio.cs" />
     <Compile Include="UsuarioRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>

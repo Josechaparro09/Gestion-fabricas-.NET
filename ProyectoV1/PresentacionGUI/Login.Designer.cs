@@ -227,6 +227,7 @@
             this.btnIngresar.Animated = true;
             this.btnIngresar.AnimationHoverSpeed = 0.07F;
             this.btnIngresar.AnimationSpeed = 0.03F;
+            this.btnIngresar.BackColor = System.Drawing.Color.Transparent;
             this.btnIngresar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.btnIngresar.BorderColor = System.Drawing.Color.Black;
             this.btnIngresar.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -242,6 +243,7 @@
             this.btnIngresar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnIngresar.OnHoverImage = null;
             this.btnIngresar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnIngresar.Radius = 20;
             this.btnIngresar.Size = new System.Drawing.Size(160, 42);
             this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Ingresar";
