@@ -90,7 +90,9 @@ namespace PresentacionGUI
                 AbrirForm(new ProduccionGUI()),
                 AbrirForm(new ProductoGUI()),
                 AbrirForm(new ProveedorGUI()),
-                AbrirForm(new RecetaProduccionGUI())
+                AbrirForm(new RecetaProduccionGUI()),
+                AbrirForm(new StockProductosGUI()),
+                AbrirForm(new VentasGUI())
             };
             return lista;
 
@@ -222,7 +224,7 @@ namespace PresentacionGUI
 
         private void gunaButton4_Click(object sender, EventArgs e)
         {
-
+            forms[10].BringToFront();
         }
 
 
@@ -276,6 +278,11 @@ namespace PresentacionGUI
         private void gunaControlBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gunaButton5_Click(object sender, EventArgs e)
+        {
+            forms[11].BringToFront();
         }
     }
 }

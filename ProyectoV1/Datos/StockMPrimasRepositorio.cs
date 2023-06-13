@@ -134,7 +134,7 @@ namespace Datos
 
             stockmp.Id = dataReader.GetInt32(0);
             stockmp.Mprima = mpRep.ObtenerPorId(dataReader.GetInt32(1));
-            stockmp.Cantidad = dataReader.GetDouble(2);
+            stockmp.Cantidad = (double)dataReader.GetDecimal(2);
             stockmp.FechaActualizacion = dataReader.GetDateTime(3);
 
             return stockmp;

@@ -437,6 +437,12 @@
     <Compile Include="RegistrosGUI.Designer.cs">
       <DependentUpon>RegistrosGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="StockProductosGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockProductosGUI.Designer.cs">
+      <DependentUpon>StockProductosGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabla Categorias.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -466,6 +472,12 @@
     </Compile>
     <Compile Include="TablaProveedores.Designer.cs">
       <DependentUpon>TablaProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentasGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasGUI.Designer.cs">
+      <DependentUpon>VentasGUI.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BienvenidaGUI.resx">
       <DependentUpon>BienvenidaGUI.cs</DependentUpon>
@@ -523,6 +535,9 @@
     <EmbeddedResource Include="RegistrosGUI.resx">
       <DependentUpon>RegistrosGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StockProductosGUI.resx">
+      <DependentUpon>StockProductosGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tabla Categorias.resx">
       <DependentUpon>Tabla Categorias.cs</DependentUpon>
     </EmbeddedResource>
@@ -537,6 +552,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TablaProveedores.resx">
       <DependentUpon>TablaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasGUI.resx">
+      <DependentUpon>VentasGUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FabricaDBDataSet.xsc">
       <DependentUpon>FabricaDBDataSet.xsd</DependentUpon>

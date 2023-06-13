@@ -104,7 +104,6 @@ namespace Datos
             stockP.producto = prodRed.ObtenerPorId(dataReader.GetInt32(1));
             stockP.Cantidad = dataReader.GetInt32(2);
             stockP.FActualizacion = dataReader.GetDateTime(3);
-            stockP.receta =re.ObtenerPorId(dataReader.GetInt32(4));
 
             return stockP;
         }

@@ -35,6 +35,7 @@
             this.pnlMenu = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gunaButton5 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
@@ -130,6 +131,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.gunaButton5);
             this.panel1.Controls.Add(this.gunaButton4);
             this.panel1.Controls.Add(this.gunaButton3);
             this.panel1.Controls.Add(this.gunaButton2);
@@ -138,6 +140,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 438);
             this.panel1.TabIndex = 0;
+            // 
+            // gunaButton5
+            // 
+            this.gunaButton5.Animated = true;
+            this.gunaButton5.AnimationHoverSpeed = 0.07F;
+            this.gunaButton5.AnimationSpeed = 0.03F;
+            this.gunaButton5.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(24)))), ((int)(((byte)(87)))));
+            this.gunaButton5.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton5.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton5.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaButton5.Image = global::PresentacionGUI.Properties.Resources.Venta;
+            this.gunaButton5.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaButton5.Location = new System.Drawing.Point(3, 275);
+            this.gunaButton5.Name = "gunaButton5";
+            this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(42)))), ((int)(((byte)(117)))));
+            this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton5.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton5.OnHoverImage = null;
+            this.gunaButton5.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton5.Radius = 20;
+            this.gunaButton5.Size = new System.Drawing.Size(234, 62);
+            this.gunaButton5.TabIndex = 14;
+            this.gunaButton5.Text = "Ventas";
+            this.gunaButton5.TextOffsetX = 10;
+            this.gunaButton5.Click += new System.EventHandler(this.gunaButton5_Click);
             // 
             // gunaButton4
             // 
@@ -163,9 +193,8 @@
             this.gunaButton4.Radius = 20;
             this.gunaButton4.Size = new System.Drawing.Size(234, 62);
             this.gunaButton4.TabIndex = 13;
-            this.gunaButton4.Text = "Ventas";
+            this.gunaButton4.Text = "Stocks";
             this.gunaButton4.TextOffsetX = 10;
-            this.gunaButton4.Visible = false;
             this.gunaButton4.Click += new System.EventHandler(this.gunaButton4_Click);
             // 
             // gunaButton3
@@ -286,5 +315,6 @@
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox3;
+        private Guna.UI.WinForms.GunaButton gunaButton5;
     }
 }

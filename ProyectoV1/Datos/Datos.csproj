@@ -49,6 +49,7 @@
     <Compile Include="CategoriaRepositorio.cs" />
     <Compile Include="CompraMPrimaRepositorio.cs" />
     <Compile Include="ConnectionManager.cs" />
+    <Compile Include="DetalleVentaRepositorio.cs" />
     <Compile Include="EmpleadoRepositorio.cs" />
     <Compile Include="ICRUD.cs" />
     <Compile Include="MedidasRepositorio.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="StockMPrimasRepositorio.cs" />
     <Compile Include="StockProductosRepositorio.cs" />
     <Compile Include="UsuarioRepositorio.cs" />
+    <Compile Include="VentaRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
