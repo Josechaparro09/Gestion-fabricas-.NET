@@ -18,6 +18,7 @@ namespace PresentacionGUI
         ProductoRepository prodRep = new ProductoRepository(ConfigConnection.connectionString);
         DetalleVentaRepository dvRep = new DetalleVentaRepository(ConfigConnection.connectionString);
         VentaReporitory vRep = new VentaReporitory(ConfigConnection.connectionString);
+        StockProductosRepository sProd = new StockProductosRepository (ConfigConnection.connectionString);
         List<DetalleVenta> dvs = new List<DetalleVenta>();
         int IdSeleccionado;
         public VentasGUI()
@@ -80,20 +81,27 @@ namespace PresentacionGUI
             }
             else
             {
-                var prod = prodRep.ObtenerPorIndex(cbxProd.SelectedIndex);
-                var dv = new DetalleVenta()
+                if (!sProd.verificarCantidad(prodRep.ObtenerPorIndex(cbxProd.SelectedIndex).Id, int.Parse(txtCantProducto.Text)))
                 {
-                    Producto = prod,
-                    Cantidad = int.Parse(txtCantProducto.Text),
-                    PrecioUnitario = prod.PrecioVenta,
-                    Subtotal = prod.PrecioVenta * int.Parse(txtCantProducto.Text)
-
-                };
-                dvs.Add(dv);
-                addDvTb(dv);
-                lblTotal.Text = CalcularTotal().ToString();
-                Menu.Show(this, "Producto agregado ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
-                limpiarCampos();
+                    Menu.Show(this, "No hay productos en el stock para agregar a la venta ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+                }
+                else
+                {
+                    var prod = prodRep.ObtenerPorIndex(cbxProd.SelectedIndex);
+                    var dv = new DetalleVenta()
+                    {
+                        Producto = prod,
+                        Cantidad = int.Parse(txtCantProducto.Text),
+                        PrecioUnitario = prod.PrecioVenta,
+                        Subtotal = prod.PrecioVenta * int.Parse(txtCantProducto.Text)
+                    };
+                    dvs.Add(dv);
+                    addDvTb(dv);
+                    lblTotal.Text = CalcularTotal().ToString();
+                    Menu.Show(this, "Producto agregado ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                    limpiarCampos();
+                }
+                
 
             }
         }
@@ -119,6 +127,7 @@ namespace PresentacionGUI
                 var id = vRep.Insert(venta);
                 foreach (var item in dvs)
                 {
+                    sProd.RestarCantidad(item.Producto.Id,item.Cantidad);
                     item.Venta = vRep.ObtenerPorId(id);
                     dvRep.Insert(item);
                 }

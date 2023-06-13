@@ -63,6 +63,8 @@ namespace Datos
 
         public int Insert(Venta v)
         {
+            var spRep = new StockProductosRepositorio(this._conexion.ConnectionString);
+
             int id;
             using (var Comando = _conexion.CreateCommand())
             {

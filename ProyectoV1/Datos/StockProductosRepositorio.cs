@@ -6,6 +6,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Collections;
 
 namespace Datos
 {
@@ -124,6 +126,40 @@ namespace Datos
             Close();
             return stockp;
 
+        }
+        public bool verificarCantidad(int idProd , int cant)
+        {
+            using (var comando = _conexion.CreateCommand())
+            {
+                comando.CommandText = "SELECT Cantidad FROM StockProductos WHERE ProductoId = @ProdId";
+                comando.Parameters.Add("ProdId", SqlDbType.Int).Value = idProd;
+                Open();
+                var cantDisponible = Convert.ToInt32(comando.ExecuteScalar());
+                Close();
+
+                if (cantDisponible >= cant)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+        }
+        public void RestarCantidad(int cant, int idProd)
+        {
+            using (var Comando = _conexion.CreateCommand())
+            {
+                Comando.CommandText = $"Update StockProductos set Cantidad = Cantidad - @Cantidad WHERE ProductoId=@ProductoId";
+                Comando.Parameters.Add("ProductoId", SqlDbType.Int).Value = idProd;
+                Comando.Parameters.Add("Cantidad", SqlDbType.Int).Value = cant;
+
+                Open();
+                var filas = Comando.ExecuteNonQuery();
+                Close();
+            }
         }
         public StockProductos ObtenerPorIndex(int index)
         {

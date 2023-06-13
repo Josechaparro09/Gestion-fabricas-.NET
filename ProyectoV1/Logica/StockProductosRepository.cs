@@ -12,6 +12,7 @@ namespace Logica
     public class StockProductosRepository : ICRUD<StockProductos>
     {
         StockProductosRepositorio stockpRep;
+        
         public StockProductosRepository(string conexion)
         {
             stockpRep = new StockProductosRepositorio(conexion);
@@ -71,6 +72,14 @@ namespace Logica
         public bool ExisteIdProd(int id)
         {
             return stockpRep.ExisteIdProd(id);
+        }
+        public bool verificarCantidad(int idProd, int cant)
+        {
+            return stockpRep.verificarCantidad(idProd, cant);
+        }
+        public void RestarCantidad(int cant, int idProd)
+        {
+            stockpRep.RestarCantidad(cant, idProd);
         }
     }
 }
